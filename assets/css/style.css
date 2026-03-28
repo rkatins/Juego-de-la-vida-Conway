@@ -1,0 +1,37 @@
+:root {
+    /* Definimos el tamaño de la rejilla */
+    --grid-size: 2;
+    --cell-size: 10px;
+    /* Ajusta este valor para cambiar el tamaño total */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.contenedor-rejilla {
+    display: grid;
+    /* Creamos 128 columnas de tamaño fijo */
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+    /* Creamos 128 filas de tamaño fijo */
+    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.celula {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 0.1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+/* Ejemplo de interacción visual */
+.celula:hover {
+    background-color: #3498db;
+}

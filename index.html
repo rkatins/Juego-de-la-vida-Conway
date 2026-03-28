@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>Rejilla 128x128</title>
-    <style>
-
-    </style>
 </head>
+
 <body>
-
     <div id="grid" class="contenedor-rejilla">
-        </div>
-
-    <script>
-        const grid = document.getElementById('grid');
-        const totalCells = 128 * 128;
-
-        // Creamos un fragmento de documento para mejorar el rendimiento al insertar
-        const fragment = document.createDocumentFragment();
-
-        for (let i = 0; i < totalCells; i++) {
-            const cell = document.createElement('div');
-            cell.classList.add('celula');
-            fragment.appendChild(cell);
-        }
-
-        grid.appendChild(fragment);
-    </script>
+    </div>
 </body>
+<script src="./assets/js/script.js"></script>
 </html>
