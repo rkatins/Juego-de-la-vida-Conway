@@ -1,17 +1,19 @@
 :root {
     /* Definimos el tamaño de la rejilla */
-    --grid-size: 2;
+    /* El `--grid-size` debe ser igual a la raiz cuadrada de la constante `totalCells` del JS */
+    --grid-size: 10;
     --cell-size: 10px;
-    /* Ajusta este valor para cambiar el tamaño total */
 }
 
 body {
+    margin: 0;
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    
+    background-color: #939393;
 }
 
 .contenedor-rejilla {
@@ -20,6 +22,7 @@ body {
     grid-template-columns: repeat(var(--grid-size), var(--cell-size));
     /* Creamos 128 filas de tamaño fijo */
     grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+
     border: 1px solid #ccc;
     background-color: white;
 }
@@ -29,9 +32,23 @@ body {
     height: var(--cell-size);
     border: 0.1px solid rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
+
+    transition: all .1s ease-in;
 }
 
 /* Ejemplo de interacción visual */
 .celula:hover {
-    background-color: #3498db;
+    background-color: #34db8d;
+}
+
+#ajustesGrid {
+    width: fit-content;
+    padding: 10px 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 5px;
+
+    background: #fff;
 }
