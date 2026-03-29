@@ -36,7 +36,6 @@ body {
     transition: all .1s ease-in;
 }
 
-/* Ejemplo de interacción visual */
 .celula:hover {
     background-color: #34db8d;
 }
@@ -47,8 +46,8 @@ body {
 
     display: flex;
     flex-direction: column;
-
+    
     border-radius: 5px;
-
-    background: #fff;
+    background-color: #8000ff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }

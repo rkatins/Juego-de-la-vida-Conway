@@ -1,0 +1,14 @@
+#contenedor_rejilla {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+}
+
+#ajustesGrid {
+    position: fixed;
+
+    top: 20px;
+    right: 20px; 
+    z-index: 2;
+}
