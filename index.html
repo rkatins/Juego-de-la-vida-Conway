@@ -5,19 +5,23 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/contenedor_rejilla.css">
+    <link rel="stylesheet" href="./assets/css/casilla.css">
 
     <title>Rejilla 128x128</title>
 </head>
 
 <body>
-    <div id="grid" class="contenedor-rejilla">
-    </div>
+    <div id="contenedor_rejilla">
+        <div id="grid" class="rejilla">
+        </div>
 
-    <div id="ajustesGrid">
-        <input type="number" name="number_ajusteGrid" id="number_ajusteGrid"
-            min="10" max="256" value="10">
-        <input type="range" id="range_ajusteGrid" name="range_ajustesGrid"
-            min="10" max="256" value="10">
+        <div id="ajustesGrid">
+            <input type="number" name="number_ajusteGrid" id="number_ajusteGrid"
+                min="10" max="256" value="10">
+            <input type="range" id="range_ajusteGrid" name="range_ajustesGrid"
+                min="10" max="256" value="10">
+        </div>
     </div>
 </body>
 <script src="./assets/js/script.js"></script>

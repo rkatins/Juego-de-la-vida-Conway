@@ -15,39 +15,3 @@ body {
     
     background-color: #939393;
 }
-
-.contenedor-rejilla {
-    display: grid;
-    /* Creamos 128 columnas de tamaño fijo */
-    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
-    /* Creamos 128 filas de tamaño fijo */
-    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
-
-    border: 1px solid #ccc;
-    background-color: white;
-}
-
-.celula {
-    width: var(--cell-size);
-    height: var(--cell-size);
-    border: 0.1px solid rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
-
-    transition: all .1s ease-in;
-}
-
-.celula:hover {
-    background-color: #34db8d;
-}
-
-#ajustesGrid {
-    width: fit-content;
-    padding: 10px 5px;
-
-    display: flex;
-    flex-direction: column;
-    
-    border-radius: 5px;
-    background-color: #8000ff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}

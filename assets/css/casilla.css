@@ -1,0 +1,12 @@
+.celula {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 0.1px solid rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+
+    transition: all .1s ease-in;
+}
+
+.celula:hover {
+    background-color: #34db8d;
+}
