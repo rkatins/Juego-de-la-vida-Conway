@@ -1,0 +1,12 @@
+:root {
+    /* Definimos el tamaño de la rejilla */
+    /* El `--grid-size` debe ser igual a la raiz cuadrada de la constante `totalCells` del JS */
+    --grid-size: 10;
+    --cell-size: 10px;
+
+    --linen: #FAF9F6;
+    --dark-royal-blue: #3A5F96;
+    --glacier-blue: #77C0D6;
+    --bright-sky-blue: #68A6E8;
+    --sky-blue: #93CDED;
+}
