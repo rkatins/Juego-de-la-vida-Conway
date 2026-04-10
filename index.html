@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/root.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/ajustes-grid.css">
+    <link rel="stylesheet" href="./assets/css/input.css">
     <link rel="stylesheet" href="./assets/css/contenedor_rejilla.css">
     <link rel="stylesheet" href="./assets/css/casilla.css">
     <link rel="stylesheet" href="./assets/css/switch-theme.css">
@@ -20,8 +21,13 @@
         </div>
 
         <div id="ajustesGrid">
-            <input type="number" name="number_ajusteGrid" id="number_ajusteGrid"
-                min="10" max="256" value="10">
+            <div id="container-inputNumber_custom">
+                <button id="btn-plus" class="btn">+</button>
+                <input type="text" name="" id="inputText_number" value="10">
+                <button id="btn-minus" class="btn">-</button>
+            </div>
+            <!-- <input type="number" name="number_ajusteGrid" id="number_ajusteGrid"
+                min="10" max="256" value="10"> -->
             <input type="range" id="range_ajusteGrid" name="range_ajustesGrid"
                 min="10" max="256" value="10">
         </div>
