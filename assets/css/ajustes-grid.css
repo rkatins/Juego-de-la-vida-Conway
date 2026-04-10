@@ -12,6 +12,6 @@
     flex-direction: column;
 
     border-radius: 5px;
-    background-color: #BC566F;
+    background-color: var(--dark-royal-blue);
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }

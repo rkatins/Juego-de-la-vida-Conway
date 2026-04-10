@@ -8,5 +8,5 @@
 }
 
 .celula:hover {
-    background-color: #BC566F;
+    background-color: var(--sky-blue);
 }
