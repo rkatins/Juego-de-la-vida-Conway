@@ -1,6 +1,7 @@
 #inputText_number {
-    width: 20px;
+    width: 30px;
 
     background: none;
     border: none;
+    text-align: center;
 }
