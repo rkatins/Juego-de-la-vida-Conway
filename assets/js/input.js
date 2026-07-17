@@ -20,7 +20,6 @@ btn_minus.addEventListener('click', () => {
     // console.log({number_ajusteGrid: parseInt(number_ajusteGrid.value)});
 })
 
-
 var ultimoValorNumericoValido = null
 number_ajusteGrid.addEventListener('focus', (e) => {
     ultimoValorNumericoValido = e.target.value
@@ -33,12 +32,12 @@ number_ajusteGrid.addEventListener('blur', (e) => {
 })
 
 range_ajusteGrid.addEventListener('input', () => {
-    fAjustarTamagno(range_ajusteGrid, number_ajusteGrid);
-});
+    fAjustarTamagno(range_ajusteGrid, number_ajusteGrid)
+})
 
 number_ajusteGrid.addEventListener('input', () => {
-    fAjustarTamagno(number_ajusteGrid, range_ajusteGrid);
-});
+    fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+})
 
 function fAjustarTamagno(dar, recibir) {
     recibir.value = dar.value;
