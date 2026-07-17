@@ -5,3 +5,13 @@
     border: none;
     text-align: center;
 }
+
+#ajustesGrid-inputNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ajustesGrid-inputNumber p {
+    cursor: pointer;
+}
