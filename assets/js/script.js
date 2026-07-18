@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fDibujarRejilla(tamagno) {
-    var grid = document.getElementById('grid');
+    let grid = document.getElementById('grid');
 
     // Obtener las "coordenadas" de las celdas marcadas antes de pulsar
     // btn-plus o btn-minus
@@ -29,10 +29,10 @@ function fDibujarRejilla(tamagno) {
     // Limpiar y dibujar la nueva rejilla
     grid.innerHTML = '';
 
-    var totalCeldas = Math.pow(tamagno, 2);
+    let totalCeldas = Math.pow(tamagno, 2);
 
     for (let i = 0; i < totalCeldas; i++) {
-        var cell = document.createElement('div');
+        let cell = document.createElement('div');
         cell.classList.add('celula');
 
         grid.appendChild(cell);
@@ -43,6 +43,7 @@ function fDibujarRejilla(tamagno) {
     coordenadasMarcadas.forEach(coord => {
         if (coord.fila < tamagno && coord.columna < tamagno) {
             const nuevoIndice = coord.fila * tamagno + coord.columna;
+
             if (celdasNuevas[nuevoIndice]) {
                 celdasNuevas[nuevoIndice].classList.add('marcada');
             }

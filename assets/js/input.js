@@ -20,7 +20,7 @@ btn_minus.addEventListener('click', () => {
     }
 })
 
-var ultimoValorNumericoValido = null
+let ultimoValorNumericoValido = null
 number_ajusteGrid.addEventListener('focus', (e) => {
     ultimoValorNumericoValido = e.target.value
 })
