@@ -5,19 +5,19 @@ const btn_plus = document.getElementById('btn-plus')
 const btn_minus = document.getElementById('btn-minus')
 
 btn_plus.addEventListener('click', () => {
-    if ((parseInt(number_ajusteGrid.value) + 1) <= 256) number_ajusteGrid.value = parseInt(number_ajusteGrid.value) + 1
-
-    range_ajusteGrid.value = parseInt(number_ajusteGrid.value)
-
-    // console.log({number_ajusteGrid: parseInt(number_ajusteGrid.value)});
+    let val = parseInt(number_ajusteGrid.value) || 10;
+    if (val + 1 <= 256) {
+        number_ajusteGrid.value = val + 1;
+        fAjustarTamagno(number_ajusteGrid, range_ajusteGrid);
+    }
 })
 
 btn_minus.addEventListener('click', () => {
-    if ((parseInt(number_ajusteGrid.value) - 1) >= 10) number_ajusteGrid.value = parseInt(number_ajusteGrid.value) - 1
-
-    range_ajusteGrid.value = parseInt(number_ajusteGrid.value)
-
-    // console.log({number_ajusteGrid: parseInt(number_ajusteGrid.value)});
+    let val = parseInt(number_ajusteGrid.value) || 10;
+    if (val - 1 >= 10) {
+        number_ajusteGrid.value = val - 1;
+        fAjustarTamagno(number_ajusteGrid, range_ajusteGrid);
+    }
 })
 
 var ultimoValorNumericoValido = null
