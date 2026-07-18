@@ -14,4 +14,7 @@
 
 #ajustesGrid-inputNumber p {
     cursor: pointer;
+
+    /* Evita que el texto/emoji se seleccione al hacer clic repetidamente */
+    user-select: none;
 }
