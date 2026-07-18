@@ -1,0 +1,29 @@
+.btn {
+    padding: 5px;
+
+    cursor: pointer;
+
+    background-color: var(--dark-royal-blue);
+    border: 0.1px solid rgb(0, 0, 0);
+    border-radius: 7px;
+
+    color: white;
+    font-size: 20px;
+    text-align: center;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--bright-sky-blue);
+    scale: 1.03;
+}
+
+.btn:active {
+    background-color: var(--bright-sky-blue);
+}

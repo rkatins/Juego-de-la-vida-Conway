@@ -14,3 +14,24 @@
     background-color: var(--dark-royal-blue);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+#inputText_number {
+    width: 30px;
+
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+#ajustesGrid-inputNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ajustesGrid-inputNumber p {
+    cursor: pointer;
+
+    /* Evita que el texto/emoji se seleccione al hacer clic repetidamente */
+    user-select: none;
+}
