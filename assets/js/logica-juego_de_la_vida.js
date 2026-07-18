@@ -48,8 +48,6 @@ class JuegoDeLaVida {
                     // Se podrá marcar hasta un máximo de la mitad del total de casillas
                     if (marcadasActualmente < maxMarcadas) {
                         celda.classList.add('marcada');
-                    } else {
-                        console.warn(`Límite alcanzado: máximo ${maxMarcadas} casillas marcadas.`);
                     }
                 }
             });
