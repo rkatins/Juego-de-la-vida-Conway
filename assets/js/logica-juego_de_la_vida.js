@@ -1,3 +1,5 @@
+
+
 /**
  * Lógica del Juego de la Vida de Conway
  */
@@ -52,5 +54,14 @@ class JuegoDeLaVida {
                 }
             });
         });
+    }
+
+    fGetTamagnoVentana() {
+        const anchoVentana = window.innerWidth
+        const altoVentana = window.innerHeight
+
+        const menorMedida = Math.min(anchoVentana, altoVentana)
+
+        console.log(menorMedida + 'px')
     }
 }
