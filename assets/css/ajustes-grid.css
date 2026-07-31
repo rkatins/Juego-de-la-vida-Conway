@@ -1,6 +1,9 @@
 #ajustesGrid {
-    position: fixed;
+    --filter-glass3d: blur(6px) brightness(1) saturate(1.5);
+    --color-glass3d: hsl(189 80% 10% / 0.2);
+    --noise-glass3d: url("https://www.transparenttextures.com/patterns/fabric-1-light.png");
 
+    position: fixed;
     top: 20px;
     z-index: 2;
 
@@ -11,13 +14,37 @@
     flex-direction: column;
 
     border-radius: 5px;
-    background-color: var(--dark-royal-blue);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+#ajustesGrid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    overflow: hidden;
+
+    /* 2. CORREGIDO: z-index negativo para enviarlo detrás del texto e inputs */
+    z-index: -1;
+
+    -webkit-backdrop-filter: var(--filter-glass3d);
+    backdrop-filter: var(--filter-glass3d);
+    background-color: var(--color-glass3d);
+    background-image: var(--noise-glass3d);
+    background-size: 100px;
+    background-repeat: repeat;
+}
+
+/* 3. NUEVO: Trae los botones y el slider al frente del todo */
+#ajustesGrid>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Tus estilos de contenido se mantienen igual --- */
 #inputText_number {
     width: 30px;
-
     background: none;
     border: none;
     text-align: center;
@@ -31,7 +58,5 @@
 
 #ajustesGrid-inputNumber p {
     cursor: pointer;
-
-    /* Evita que el texto/emoji se seleccione al hacer clic repetidamente */
     user-select: none;
 }
