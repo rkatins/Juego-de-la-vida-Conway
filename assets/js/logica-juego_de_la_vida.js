@@ -3,7 +3,7 @@
 /**
  * Lógica del Juego de la Vida de Conway
  */
-class JuegoDeLaVida {
+class LogicaJuegoDeLaVida {
     constructor(tamagno) {
         this.tamagno = tamagno;
         this.grid = [];
