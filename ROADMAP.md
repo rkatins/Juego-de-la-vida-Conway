@@ -34,3 +34,5 @@
 13. [ ] Implementar control de velocidad (slider de rango)
 
 14. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
+
+15. [ ] Hacer el css responsive para la web
