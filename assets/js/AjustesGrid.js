@@ -100,4 +100,4 @@ class AjustesGrid {
 }
 
 // Instanciar la clase para que registre los manejadores de eventos inmediatamente.
-const AjustesGrid = new AjustesGrid()
+const AjustesGridController = new AjustesGrid()

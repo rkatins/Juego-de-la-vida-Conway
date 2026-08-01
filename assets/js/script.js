@@ -22,7 +22,7 @@ let maxTamagno = 50
  * - El límite físico (en píxeles) se aplica a las propiedades maxWidth y maxHeight de la rejilla.
  */
 function fAjustarLimitesMaximos() {
-    maxTamagno = LogicaJuegoDeLaVida.fGetTamagnoVentana()
+    maxTamagno = LogicaController.fGetTamagnoVentana()
     const maxPixeles = maxTamagno - 40
 
     // Suponemos que cada celda mide 10px de ancho y alto (definido en root.css)

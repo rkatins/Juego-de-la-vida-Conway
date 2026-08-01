@@ -74,4 +74,4 @@ class LogicaJuegoDeLaVida {
 }
 
 // Instancia global compartida por todos los scripts
-const LogicaJuegoDeLaVida = new LogicaJuegoDeLaVida(10)
+const LogicaController = new LogicaJuegoDeLaVida(10)
