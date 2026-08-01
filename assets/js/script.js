@@ -1,5 +1,3 @@
-const range_ajusteGrid = document.getElementById('range_ajusteGrid')
-
 /**
  * @type {number} El tamaño máximo inicial por defecto de la rejilla.
  */
