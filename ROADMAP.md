@@ -1,0 +1,30 @@
+1. [x] Diseñar e implementar la interfaz base de la web (HTML y CSS) para el contenedor de la rejilla, el fondo y los paneles de control.
+
+2. [x] Desarrollar la clase LogicaJuegoDeLaVida para inicializar y reiniciar la matriz de datos del juego.
+
+3. [x] Añadir e implementar el botón de reiniciar (🔄️ REINICIAR).
+
+4. [x] Crear y maquetar los controles de ajuste del tamaño de la rejilla (slider de rango y botones +/-).
+
+5. [x] Sincronizar los inputs dentro de la clase AjustesGrid (input:range / input:number / botones +/-).
+
+6. [x] Implementar la interacción para seleccionar y marcar visualmente casillas en la rejilla.
+
+7. [x] Establecer un limitador de selección de casillas (máximo permitido: la mitad del total de celdas).
+
+8. [x] Guardar el estado de las celdas marcadas al cambiar el tamaño de la rejilla para restaurarlas automáticamente.
+
+9. [x] Obtener el ancho y alto de la página para comparar cuál es el de menor tamaño, aplicar límites físicos al contenedor de la rejilla y calcular dinámicamente los límites de celdas para que no sobresalga de la pantalla.
+
+10. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador).
+> Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
+> - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
+> - Botón de Siguiente Generación/Paso (⏭️)
+> - Slider para controlar la velocidad (ms por generación)
+> - Indicador/Contador de celdas seleccionadas/vivas.
+
+11. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
+
+12. [ ] Implementar control de velocidad (slider de rango).
+
+13. [ ] Implementar contador de celdas vacías y marcadas (solo se mostrará este al pulsar sobre el botón de reiniciar).
