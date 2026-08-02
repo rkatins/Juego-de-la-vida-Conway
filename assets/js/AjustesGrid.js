@@ -18,7 +18,7 @@ btn_plus.addEventListener('click', () => {
     const maxVal = window.maxCeldas || 256
     if (val + 1 <= maxVal) {
         number_ajusteGrid.value = val + 1
-        fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+        AjustesGridController.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
     }
 })
 
@@ -30,7 +30,7 @@ btn_minus.addEventListener('click', () => {
     let val = parseInt(number_ajusteGrid.value) || 10
     if (val - 1 >= 10) {
         number_ajusteGrid.value = val - 1
-        fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+        AjustesGridController.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
     }
 })
 
@@ -71,14 +71,14 @@ number_ajusteGrid.addEventListener('blur', (e) => {
  * Escucha la entrada del control de rango (slider) para actualizar y redibujar la cuadrícula.
  */
 range_ajusteGrid.addEventListener('input', () => {
-    fAjustarTamagno(range_ajusteGrid, number_ajusteGrid)
+    AjustesGridController.fAjustarTamagno(range_ajusteGrid, number_ajusteGrid)
 })
 
 /**
  * Escucha la entrada de texto directo en el campo numérico para actualizar y redibujar la cuadrícula.
  */
 number_ajusteGrid.addEventListener('input', () => {
-    fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+    AjustesGridController.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
 })
 
 class AjustesGrid {
