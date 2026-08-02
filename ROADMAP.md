@@ -36,3 +36,7 @@
 14. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
 
 15. [ ] Hacer el css responsive para la web
+
+16. [] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
+
+17. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
