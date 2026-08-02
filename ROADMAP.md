@@ -20,23 +20,21 @@
 
 9. [x] Obtener el ancho y alto de la página para comparar cuál es el de menor tamaño, aplicar límites físicos al contenedor de la rejilla y calcular dinámicamente los límites de celdas para que no sobresalga de la pantalla.
 
-10. En caso de que se quiera introducir o aplicar el tamaño de la rejilla con valores personalizados con el input:number se mostrara un mensaje/notificacion de alerta advirtiendo del tamaño introducido no es valido.
-
-11. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
+10. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️)
 > - Slider para controlar la velocidad (ms por generación)
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
-12. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
+11. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
 
-13. [ ] Implementar control de velocidad (slider de rango)
+12. [ ] Implementar control de velocidad (slider de rango)
 
-14. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
+13. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
 
-15. [ ] Hacer el css responsive para la web
+14. [ ] Hacer el css responsive para la web
 
-16. [] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
+15. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
 
-17. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
+16. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
