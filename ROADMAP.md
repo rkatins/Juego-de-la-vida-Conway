@@ -24,6 +24,7 @@
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️)
+> - Botón de Anterior Generación/Paso Atrás (⏮️)
 > - Slider para controlar la velocidad (ms por generación)
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
@@ -38,3 +39,12 @@
 15. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
 
 16. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
+
+17. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
+
+18. [ ] Añadir una barra de progreso que refleje el avance de las generaciones.
+> Crear un elemento `<progress>` o un contenedor personalizado `#progressBar` en `index.html`.
+> - La barra se irá rellenando gradualmente con cada generación/paso calculado de la simulación.
+> - El valor máximo (100%) se definirá en función del límite máximo de generaciones configurado.
+> - Al finalizar todas las generaciones o alcanzar el final del juego, la barra se completará.
+> - Al presionar el botón de reiniciar (🔄️ REINICIAR), la barra volverá a su estado inicial de 0%.
