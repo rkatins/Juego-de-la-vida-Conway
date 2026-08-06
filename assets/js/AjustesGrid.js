@@ -61,7 +61,7 @@ number_ajusteGrid.addEventListener('focus', (e) => {
  * - Por tanto, el límite máximo expresado en CELDAS es: (ventana - 40) / 10.
  */
 number_ajusteGrid.addEventListener('blur', (e) => {
-    const maxVal = window.maxCeldas || Math.floor((logica.fGetTamagnoVentana() - 40) / 10)
+    const maxVal = window.maxCeldas || Math.floor((LogicaController.fGetTamagnoVentana() - 40) / 10)
     if (isNaN(e.target.value) || e.target.value < 10 || e.target.value > maxVal) {
         number_ajusteGrid.value = ultimoValorNumericoValido
     }

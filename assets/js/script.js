@@ -112,9 +112,9 @@ function fDibujarRejilla(tamagno) {
 
     /**
      * En JavaScript las clases son funciones constructoras bajo el capó,
-     * por lo que 'typeof JuegoDeLaVida === "function"' verifica si la clase está definida.
+     * por lo que 'typeof LogicaJuegoDeLaVida === "function"' verifica si la clase está definida.
      * 
-     * Comprueba si existen tanto la clase JuegoDeLaVida como su método de instancia
+     * Comprueba si existen tanto la clase LogicaJuegoDeLaVida como su método de instancia
      * fGestionarMarcadoCasillas en su prototipo. En caso de existir, crea una instancia
      * y ejecuta la función.
      * 
@@ -122,13 +122,13 @@ function fDibujarRejilla(tamagno) {
      * evita tener que crear y compilar las funciones desde cero para cada objeto. Al consultar
      * el prototipo/prototype, estamos preguntando si la función está definida en dicha plantilla de la clase.
      */
-    if (typeof JuegoDeLaVida === 'function' && typeof JuegoDeLaVida.prototype.fGestionarMarcadoCasillas === 'function') {
-        const miJuego = new JuegoDeLaVida(tamagno)
+    if (typeof LogicaJuegoDeLaVida === 'function' && typeof LogicaJuegoDeLaVida.prototype.fGestionarMarcadoCasillas === 'function') {
+        const miJuego = new LogicaJuegoDeLaVida(tamagno)
         miJuego.fGestionarMarcadoCasillas()
 
         let btnReiniciar = document.getElementById('btn-reiniciar')
 
         // Asocia el evento click al botón de reinicio para vaciar y resetear el tablero.
-        btnReiniciar.addEventListener('click', () => miJuego.fReiniciarJuego())
+        btnReiniciar.onclick = () => miJuego.fReiniciarJuego()
     }
 }
