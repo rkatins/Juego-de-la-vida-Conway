@@ -25,8 +25,8 @@
 11. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
-> - Botón de Siguiente Generación/Paso (⏭️)
-> - Botón de Anterior Generación/Paso Atrás (⏮️)
+> - Botón de Siguiente Generación/Paso (⏭️), solo estara disponible cuando la simulacion este en pausa
+> - Botón de Anterior Generación/Paso Atrás (⏮️), solo estara disponible cuando la simulacion este en pausa
 > - Slider para controlar la velocidad (ms por generación)
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
