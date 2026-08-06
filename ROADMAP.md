@@ -20,7 +20,9 @@
 
 9. [x] Obtener el ancho y alto de la página para comparar cuál es el de menor tamaño, aplicar límites físicos al contenedor de la rejilla y calcular dinámicamente los límites de celdas para que no sobresalga de la pantalla.
 
-10. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
+10. [ ] Nuevo diseño para adaptar a los botones y dar un estilo más moderno
+
+11. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️)
@@ -28,21 +30,21 @@
 > - Slider para controlar la velocidad (ms por generación)
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
-11. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
+12. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
 
-12. [ ] Implementar control de velocidad (slider de rango)
+13. [ ] Implementar control de velocidad (slider de rango)
 
-13. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
+14. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
 
-14. [ ] Hacer el css responsive para la web
+15. [ ] Hacer el css responsive para la web
 
-15. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
+16. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
 
-16. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
+17. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
 
-17. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
+18. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
 
-18. [ ] Añadir una barra de progreso que refleje el avance de las generaciones.
+19. [ ] Añadir una barra de progreso que refleje el avance de las generaciones.
 > Crear un elemento `<progress>` o un contenedor personalizado `#progressBar` en `index.html`.
 > - La barra se irá rellenando gradualmente con cada generación/paso calculado de la simulación.
 > - El valor máximo (100%) se definirá en función del límite máximo de generaciones configurado.
