@@ -1,13 +1,14 @@
 #reiniciarGrid {
-    position: fixed;
+    grid-row-start: 3;
 
-    bottom: 20px;
-    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
     width: fit-content;
 }
 
 #btn-reiniciar:hover {
-    background-color: var(--bright-sky-blue);
     scale: 1.15;
 }

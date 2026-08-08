@@ -1,13 +1,13 @@
 body {
     margin: 0;
-    width: 100vw;
-    min-height: 100vh;
     overflow-x: hidden;
+    height: 100vh;
+    box-sizing: border-box;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
 
     background:
         radial-gradient(at 48.521769498633496% 35.71767301009707%, hsla(45, 28.571428571428513%, 97.25490196078431%, 1) 0%, hsla(45, 28.571428571428513%, 97.25490196078431%, 0) 100%),
