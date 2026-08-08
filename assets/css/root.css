@@ -9,4 +9,6 @@
     --glacier-blue: #77C0D6;
     --bright-sky-blue: #68A6E8;
     --sky-blue: #93CDED;
+
+    --icon-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(263deg) brightness(101%) contrast(101%);
 }
