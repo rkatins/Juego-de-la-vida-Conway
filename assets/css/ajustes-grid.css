@@ -1,8 +1,4 @@
 #ajustesGrid {
-    --filter-glass3d: blur(6px) brightness(1) saturate(1.5);
-    --color-glass3d: hsl(189 80% 10% / 0.2);
-    --noise-glass3d: url("https://www.transparenttextures.com/patterns/fabric-1-light.png");
-
     position: fixed;
     top: 20px;
     z-index: 2;
