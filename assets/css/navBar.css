@@ -1,0 +1,29 @@
+.icon-filter {
+    filter: var(--icon-filter);
+}
+
+#navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#navBar-menu {
+    width: fit-content;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#navBar-menu img,
+#btn-reiniciar img {
+    width: 50px;
+    height: 50px;
+}
