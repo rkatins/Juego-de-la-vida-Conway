@@ -1,5 +1,5 @@
 .glass3d {
-    --filter-glass3d: blur(32px) brightness(0.85) saturate(2.5);
+    --filter-glass3d: blur(2px) brightness(1.1) saturate(1.8);
     --color-glass3d: hsl(189 80% 10% / 0.2);
     --noise-glass3d: url("https://www.transparenttextures.com/patterns/egg-shell.png");
 
