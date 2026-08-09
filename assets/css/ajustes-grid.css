@@ -1,8 +1,6 @@
 #ajustesGrid {
     position: fixed;
-
     top: 20px;
-    right: 20px; 
     z-index: 2;
 
     width: fit-content;
@@ -12,6 +10,41 @@
     flex-direction: column;
 
     border-radius: 5px;
-    background-color: var(--dark-royal-blue);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#ajustesGrid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    overflow: hidden;
+
+    -webkit-backdrop-filter: var(--filter-glass3d);
+    backdrop-filter: var(--filter-glass3d);
+    background-color: var(--color-glass3d);
+    background-image: var(--noise-glass3d);
+    background-size: 100px;
+    background-repeat: repeat;
+
+    z-index: -1;
+}
+
+#inputText_number {
+    width: 30px;
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+#ajustesGrid-inputNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ajustesGrid-inputNumber p {
+    cursor: pointer;
+    user-select: none;
 }

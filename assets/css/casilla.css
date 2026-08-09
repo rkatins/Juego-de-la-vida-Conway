@@ -10,3 +10,11 @@
 .celula:hover {
     background-color: var(--sky-blue);
 }
+
+.celula.marcada {
+    background-color: var(--bright-sky-blue);
+}
+
+.celula.marcada:hover {
+    background-color: var(--dark-royal-blue);
+}
