@@ -29,9 +29,17 @@
     height: 50px;
 }
 
+.icon {
+    position: relative;
+
+    cursor: pointer;
+}
+
 .icon .tooltip {
     position: absolute;
     top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 
     padding: 5px 10px;
 
@@ -47,8 +55,24 @@
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+.icon .tooltip::before {
+    content: "";
+    position: absolute;
+
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #333;
+
+    border-radius: 1px;
+}
+
 .icon:hover .tooltip {
-    top: 75px;
+    top: 70px;
     opacity: 1;
     visibility: visible;
 }
