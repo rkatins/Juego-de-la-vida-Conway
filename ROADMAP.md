@@ -22,9 +22,11 @@
 
 10. [x] Nuevo diseño en FIGMA para adaptar a los botones y dar un estilo más moderno
 
-11. [ ] Implementar nuevo diseño en `index.css`
+11. [x] Añadir tooltips a todos los botones del navBar
 
-12. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
+12. [ ] Implementar nuevo diseño en `index.css`
+
+13. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️), solo estara disponible cuando la simulacion este en pausa
