@@ -7,9 +7,7 @@ const btn_minus_ajusteGrid = document.getElementById('ajusteGrid-btn-minus')
  * Guarda el valor numérico actual al hacer foco en el campo de entrada.
  * Esto permite restaurar el último valor válido en caso de que el usuario introduzca un dato incorrecto.
  */
-let ultimoValorNumericoValido = null
-
-
+// let ultimoValorNumericoValido = null
 
 /**
  * Valida el valor del tamaño al perder el foco en el campo numérico.
@@ -29,12 +27,12 @@ let ultimoValorNumericoValido = null
  * 
  * - Por tanto, el límite máximo expresado en CELDAS es: (ventana - 40) / 10.
  */
-number_ajusteGrid.addEventListener('blur', (e) => {
-    const maxVal = window.maxCeldas || Math.floor((LogicaController.fGetTamagnoVentana() - 40) / 10)
-    if (isNaN(e.target.value) || e.target.value < 10 || e.target.value > maxVal) {
-        number_ajusteGrid.value = ultimoValorNumericoValido
-    }
-})
+// number_ajusteGrid.addEventListener('blur', (e) => {
+//     const maxVal = window.maxCeldas || Math.floor((Logica.fGetTamagnoVentana() - 40) / 10)
+//     if (isNaN(e.target.value) || e.target.value < 10 || e.target.value > maxVal) {
+//         number_ajusteGrid.value = ultimoValorNumericoValido
+//     }
+// })
 
 class AjustesGridController {
     /**
@@ -63,7 +61,7 @@ class AjustesGridController {
         if (val + 1 <= maxVal) {
             number_ajusteGrid.value = val + 1
             range_ajusteGrid.value = val + 1
-            // AjustesGridController.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+            // AjustesGrid.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
         }
     }
 
@@ -76,7 +74,7 @@ class AjustesGridController {
         if (val - 1 >= 10) {
             number_ajusteGrid.value = val - 1
             range_ajusteGrid.value = val - 1
-            // AjustesGridController.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+            // AjustesGrid.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
         }
     }
 
@@ -96,4 +94,4 @@ class AjustesGridController {
 }
 
 // Instanciar la clase para que registre los manejadores de eventos inmediatamente.
-const AjustesGridController = new AjustesGridController()
+const AjustesGrid = new AjustesGridController()

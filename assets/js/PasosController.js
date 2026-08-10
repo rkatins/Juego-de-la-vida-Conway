@@ -2,4 +2,4 @@ class PasosController {
 
 }
 
-const PasosController = new PasosController()
+const Pasos = new PasosController()

@@ -2,4 +2,4 @@ class TiempoController {
 
 }
 
-const TiempoController = new TiempoController()
+const Tiempo = new TiempoController()

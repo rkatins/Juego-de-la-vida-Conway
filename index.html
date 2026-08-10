@@ -33,15 +33,14 @@
                 <div id="ajusteGrid-panel" class="glass3d panel-ajustes activo">
                     <div class="controles-numero">
                         <img id="ajusteGrid-btn-plus" src="./assets/icons/plus.svg" alt="" class="icon-filter btn"
-                            onclick="AjustesGridController.fIncrementarBtnPlus()">
-                        <input type="text" id="ajusteGrid-number" value="10"
-                            oninput="AjustesGridController.fChangeInputNumber()">
+                            onclick="AjustesGrid.fIncrementarBtnPlus()">
+                        <input type="text" id="ajusteGrid-number" value="10" oninput="AjustesGrid.fChangeInputNumber()">
                         <img id="ajusteGrid-btn-minus" src="./assets/icons/minus.svg" alt="" class="icon-filter btn"
-                            onclick="AjustesGridController.fDecrementarBtnMinus()">
+                            onclick="AjustesGrid.fDecrementarBtnMinus()">
                     </div>
 
                     <input type="range" id="ajusteGrid-range" name="ajusteGrid-range" min="10" value="10"
-                        oninput="AjustesGridController.fChangeInputRange()">
+                        oninput="AjustesGrid.fChangeInputRange()">
 
                 </div>
             </div>

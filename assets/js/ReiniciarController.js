@@ -18,4 +18,4 @@ class ReiniciarController {
     }
 }
 
-const ReiniciarController = new ReiniciarController()
+const Reiniciar = new ReiniciarController()
