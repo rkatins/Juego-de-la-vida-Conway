@@ -4,7 +4,7 @@
     grid-template-rows: repeat(2, 1fr);
 }
 
-#ajusteGrid-panel > .controles-numero {
+#ajusteGrid-panel>.controles-numero {
     display: flex;
     gap: 10px;
 }
@@ -18,7 +18,7 @@
     border: none;
 }
 
-#range-ajusteGrid {
+#ajusteGrid-range {
     grid-row-start: 2;
 
     align-self: center;

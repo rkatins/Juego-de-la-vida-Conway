@@ -1,7 +1,7 @@
-const range_ajusteGrid = document.getElementById('range_ajusteGrid')
-const number_ajusteGrid = document.getElementById('inputText_number')
-const btn_plus = document.getElementById('btn-plus')
-const btn_minus = document.getElementById('btn-minus')
+const range_ajusteGrid = document.getElementById('ajusteGrid-range')
+const number_ajusteGrid = document.getElementById('ajusteGrid-number')
+const btn_plus = document.getElementById('ajusteGrid-btn-plus')
+const btn_minus = document.getElementById('ajusteGrid-btn-minus')
 
 /**
  * Guarda el valor numérico actual al hacer foco en el campo de entrada.
