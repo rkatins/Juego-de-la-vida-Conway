@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="./assets/css/btn.css">
     <link rel="stylesheet" href="./assets/css/input-range.css">
     <link rel="stylesheet" href="./assets/css/background.css">
-    <!-- <link rel="stylesheet" href="./assets/css/switch-theme.css"> -->
-    <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
     <link rel="stylesheet" href="./assets/css/glass-effect.css">
     <link rel="stylesheet" href="./assets/css/navBar.css">
     <link rel="stylesheet" href="./assets/css/panel-ajustes.css">
+    <!-- <link rel="stylesheet" href="./assets/css/switch-theme.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
+
+    <script src="./assets/js/AjustesGridController.js"></script>
 
     <title>Rejilla 128x128</title>
 </head>
@@ -30,12 +32,17 @@
 
                 <div id="ajusteGrid-panel" class="glass3d panel-ajustes activo">
                     <div class="controles-numero">
-                        <img id="ajusteGrid-btn-plus" src="./assets/icons/plus.svg" alt="" class="icon-filter btn">
-                        <input type="text" id="ajusteGrid-number" value="10">
-                        <img id="ajusteGrid-btn-minus" src="./assets/icons/minus.svg" alt="" class="icon-filter btn">
+                        <img id="ajusteGrid-btn-plus" src="./assets/icons/plus.svg" alt="" class="icon-filter btn"
+                            onclick="AjustesGridController.fIncrementarBtnPlus()">
+                        <input type="text" id="ajusteGrid-number" value="10"
+                            oninput="AjustesGridController.fChangeInputNumber()">
+                        <img id="ajusteGrid-btn-minus" src="./assets/icons/minus.svg" alt="" class="icon-filter btn"
+                            onclick="AjustesGridController.fDecrementarBtnMinus()">
                     </div>
 
-                    <input type="range" id="ajusteGrid-range" name="ajusteGrid-range" min="10" value="10">
+                    <input type="range" id="ajusteGrid-range" name="ajusteGrid-range" min="10" value="10"
+                        oninput="AjustesGridController.fChangeInputRange()">
+
                 </div>
             </div>
 
@@ -63,10 +70,6 @@
             <span class="slider"></span>
         </label> -->
     </div>
-
-    <script src="./assets/js/LogicaJuegoDeLaVida.js"></script>
-    <script src="./assets/js/AjustesGrid.js"></script>
-    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
