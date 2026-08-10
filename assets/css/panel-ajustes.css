@@ -1,0 +1,16 @@
+.panel-ajustes {
+    position: absolute;
+
+    top: 80px;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 10px;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.activo {
+    visibility: visible;
+    opacity: 1;
+}

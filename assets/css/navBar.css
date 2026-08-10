@@ -3,6 +3,8 @@
 }
 
 #navBar {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +14,8 @@
 }
 
 #navBar-menu {
+    position: relative;
+
     width: fit-content;
 
     border: 1px solid #ccc;
