@@ -1,4 +1,51 @@
 /**
+ * Escucha la carga completa del DOM para ajustar los límites del tablero y dibujar la rejilla por primera vez.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    fAjustarLimitesMaximos()
+    fDibujarRejilla(10)
+})
+
+/**
+ * Escucha el cambio de dimensiones de la ventana para recalcular y aplicar el tamaño máximo en píxeles y celdas.
+ */
+window.addEventListener('resize', () => {
+    fAjustarLimitesMaximos()
+})
+
+class RejillaController {
+
+    /**
+     * Gestiona la selección y marcado de las casillas de la rejilla
+     * con un límite máximo de casillas seleccionadas (total / 2)
+     */
+    fGestionarMarcadoCasillas() {
+        const celdas = document.querySelectorAll('.celula');
+        const maxMarcadas = Math.floor(celdas.length / 2);
+
+        // Asocia un evento click a cada celda para marcarla o desmarcarla
+        celdas.forEach(celda => {
+            celda.addEventListener('click', () => {
+                const marcadasActualmente = document.querySelectorAll('.celula.marcada').length
+
+                if (celda.classList.contains('marcada')) {
+                    // Si ya está pintada, pasa a ser blanca/vacía al hacer clic
+                    celda.classList.remove('marcada')
+                } else {
+                    // Se podrá marcar hasta un máximo de la mitad del total de casillas
+                    if (marcadasActualmente < maxMarcadas) {
+                        celda.classList.add('marcada')
+                    }
+                }
+            })
+        })
+    }
+}
+
+const RejillaController = new RejillaController()
+// ---
+
+/**
  * @type {number} El tamaño máximo inicial por defecto de la rejilla.
  */
 let maxTamagno = 50
@@ -41,20 +88,7 @@ function fAjustarLimitesMaximos() {
     }
 }
 
-/**
- * Escucha la carga completa del DOM para ajustar los límites del tablero y dibujar la rejilla por primera vez.
- */
-document.addEventListener('DOMContentLoaded', () => {
-    fAjustarLimitesMaximos()
-    fDibujarRejilla(10)
-})
 
-/**
- * Escucha el cambio de dimensiones de la ventana para recalcular y aplicar el tamaño máximo en píxeles y celdas.
- */
-window.addEventListener('resize', () => {
-    fAjustarLimitesMaximos()
-})
 
 /**
  * Limpia y redibuja la rejilla con el tamaño especificado.

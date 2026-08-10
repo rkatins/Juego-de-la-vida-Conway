@@ -3,37 +3,6 @@
  */
 class LogicaJuegoDeLaVida {
     /**
-     * Inicializa una nueva instancia de la lógica del juego con el tamaño especificado.
-     * Crea una cuadrícula vacía (llena de ceros/células muertas).
-     */
-    constructor(tamagno) {
-        this.tamagno = tamagno
-        this.grid = []
-
-        for (let i = 0; i < this.tamagno; i++) {
-            this.grid.push(new Array(this.tamagno).fill(0))
-        }
-    }
-
-    /**
-     * Reinicia el tablero, poniendo todas las células como muertas (0)
-     */
-    fReiniciarJuego() {
-        this.grid = []
-
-        for (let i = 0; i < this.tamagno; i++) {
-            this.grid.push(new Array(this.tamagno).fill(0))
-        }
-
-        // Limpiar visualmente las celdas en el HTML
-        document.querySelectorAll('.celula.marcada').forEach(celda => {
-            celda.classList.remove('marcada');
-        });
-
-        console.log("¡El juego ha sido reiniciado con éxito!")
-    }
-
-    /**
      * Gestiona la selección y marcado de las casillas de la rejilla
      * con un límite máximo de casillas seleccionadas (total / 2)
      */
