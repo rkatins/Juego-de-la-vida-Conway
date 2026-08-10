@@ -26,9 +26,13 @@
 
 12. [WIP] Añadir paneles de ajustes a los iconos del navBar
 
-13. [ ] Implementar nuevo diseño en `index.css`
+13. [ ] Quitar el tooltip del icono correspondiente se el panel este abierto
 
-14. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
+14. [ ] Añadir una pequeña animación visual en los iconos del navBar al pasar por encima (ej. scale 1.2)
+
+15. [ ] Implementar nuevo diseño en `index.css`
+
+16. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️), solo estara disponible cuando la simulacion este en pausa
@@ -36,17 +40,17 @@
 > - Slider para controlar la velocidad (ms por generación)
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
-15. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
+17. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
 
-16. [ ] Implementar control de velocidad (slider de rango)
+18. [ ] Implementar control de velocidad (slider de rango)
 
-17. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
+19. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
 
-18. [ ] Hacer el css responsive para la web
+20. [ ] Hacer el css responsive para la web
 
-19. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
+21. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
 
-20. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
+22. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
 
 21. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
 
