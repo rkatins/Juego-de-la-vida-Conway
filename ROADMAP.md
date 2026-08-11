@@ -24,15 +24,22 @@
 
 11. [x] Añadir tooltips a todos los botones del navBar
 
-12. [WIP] Añadir paneles de ajustes a los iconos del navBar
+12. [ ] Añadir un boton de cerrar al panel de ajustes
+> El icono [X](assets/icons/x.svg) ya esta descargado 
+> Poner este en el panel, el panel puede definirse en un grid en el que la parte superior sea para la X
+> o hacer que la X sea absoluta y este en la esquina superior derecha del panel (de esta forma la clase puede ser reutilizable seguramente)
 
-13. [ ] Quitar el tooltip del icono correspondiente se el panel este abierto
+13. [WIP] Hacer que el tooltip desaparezca cuando se abra el panel de ajustes
 
-14. [ ] Añadir una pequeña animación visual en los iconos del navBar al pasar por encima (ej. scale 1.2)
+14. [WIP] Añadir paneles de ajustes a los iconos del navBar
 
-15. [ ] Implementar nuevo diseño en `index.css`
+15. [ ] Quitar el tooltip del icono correspondiente se el panel este abierto
 
-16. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
+16. [ ] Añadir una pequeña animación visual en los iconos del navBar al pasar por encima (ej. scale 1.2)
+
+17. [ ] Implementar nuevo diseño en `index.css`
+
+18. [ ] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️), solo estara disponible cuando la simulacion este en pausa
@@ -52,9 +59,9 @@
 
 22. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
 
-21. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
+23. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
 
-22. [ ] Añadir una barra de progreso que refleje el avance de las generaciones.
+24. [ ] Añadir una barra de progreso que refleje el avance de las generaciones.
 > Crear un elemento `<progress>` o un contenedor personalizado `#progressBar` en `index.html`.
 > - La barra se irá rellenando gradualmente con cada generación/paso calculado de la simulación.
 > - El valor máximo (100%) se definirá en función del límite máximo de generaciones configurado.

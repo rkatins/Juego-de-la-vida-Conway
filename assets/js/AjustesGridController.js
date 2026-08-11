@@ -91,6 +91,14 @@ class AjustesGridController {
     fChangeInputRange() {
         number_ajusteGrid.value = range_ajusteGrid.value
     }
+
+    fAlternarToolTip() {
+        const tooltip_ajusteGrid = document.querySelector("#AjustesGrid-tooltip")
+        const panel_ajusteGrid = document.querySelector("#ajusteGrid-panel")
+
+        tooltip_ajusteGrid.style.visibility = panel_ajusteGrid.classList.contains("activo") ? "hidden" : "visible"
+        tooltip_ajusteGrid.style.opacity = panel_ajusteGrid.classList.contains("activo") ? "0" : "1"
+    }
 }
 
 // Instanciar la clase para que registre los manejadores de eventos inmediatamente.
