@@ -1,8 +1,3 @@
-const range_ajusteGrid = document.getElementById('ajusteGrid-range')
-const number_ajusteGrid = document.getElementById('ajusteGrid-number')
-const btn_plus_ajusteGrid = document.getElementById('ajusteGrid-btn-plus')
-const btn_minus_ajusteGrid = document.getElementById('ajusteGrid-btn-minus')
-
 /**
  * Guarda el valor numérico actual al hacer foco en el campo de entrada.
  * Esto permite restaurar el último valor válido en caso de que el usuario introduzca un dato incorrecto.
@@ -92,14 +87,73 @@ class AjustesGridController {
         number_ajusteGrid.value = range_ajusteGrid.value
     }
 
+    /**
+     * Abre o cierra el panel de ajustes del Grid
+     */
+    fAbrirCerrarPanel() {
+        const panel_ajusteGrid = document.querySelector("#ajusteGrid-panel")
+
+        panel_ajusteGrid.classList.toggle("activo")
+    }
+
+    /**
+     * Alterna la visibilidad del ToolTip
+     */
     fAlternarToolTip() {
         const tooltip_ajusteGrid = document.querySelector("#AjustesGrid-tooltip")
         const panel_ajusteGrid = document.querySelector("#ajusteGrid-panel")
 
-        tooltip_ajusteGrid.style.visibility = panel_ajusteGrid.classList.contains("activo") ? "hidden" : "visible"
-        tooltip_ajusteGrid.style.opacity = panel_ajusteGrid.classList.contains("activo") ? "0" : "1"
+        tooltip_ajusteGrid.style.visibility = panel_ajusteGrid.classList.contains("activo") ? "hidden" : ""
+        tooltip_ajusteGrid.style.opacity = panel_ajusteGrid.classList.contains("activo") ? "0" : ""
+
+        /* Alternativa con if/else (por si resulta más legible):
+        if (panel_ajusteGrid.classList.contains("activo")) {
+            tooltip_ajusteGrid.style.visibility = "hidden";
+            tooltip_ajusteGrid.style.opacity = "0";
+        } else {
+            tooltip_ajusteGrid.style.visibility = "";
+            tooltip_ajusteGrid.style.opacity = "";
+        }
+        */
     }
 }
 
 // Instanciar la clase para que registre los manejadores de eventos inmediatamente.
 const AjustesGrid = new AjustesGridController()
+
+// --- addEventListener ---
+const icon_ajusteGrid = document.querySelector("#AjustesGrid-icon > img")
+const btn_close_panelAjusteGrid = document.querySelector("#ajusteGrid-panel > .btn-close")
+const range_ajusteGrid = document.getElementById('ajusteGrid-range')
+const number_ajusteGrid = document.getElementById('ajusteGrid-number')
+const btn_plus_ajusteGrid = document.getElementById('ajusteGrid-btn-plus')
+const btn_minus_ajusteGrid = document.getElementById('ajusteGrid-btn-minus')
+
+range_ajusteGrid.addEventListener('input', () => {
+    AjustesGrid.fAjustarTamagnoGrid()
+})
+
+number_ajusteGrid.addEventListener('input', () => {
+    AjustesGrid.fChangeInputNumber()
+})
+
+btn_plus_ajusteGrid.addEventListener('click', () => {
+    AjustesGrid.fIncrementarBtnPlus()
+})
+
+btn_minus_ajusteGrid.addEventListener('click', () => {
+    AjustesGrid.fDecrementarBtnMinus()
+})
+
+icon_ajusteGrid.addEventListener('click', () => {
+    AjustesGrid.fAbrirCerrarPanel()
+    AjustesGrid.fAlternarToolTip()
+})
+
+btn_close_panelAjusteGrid.addEventListener('click', (e) => {
+    e.stopPropagation()
+
+    AjustesGrid.fAbrirCerrarPanel()
+    AjustesGrid.fAlternarToolTip()
+})
+
