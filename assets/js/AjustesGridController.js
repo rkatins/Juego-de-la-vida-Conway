@@ -151,6 +151,7 @@ icon_ajusteGrid.addEventListener('click', () => {
 })
 
 btn_close_panelAjusteGrid.addEventListener('click', (e) => {
+    // Función interna de JS para evitar que el clic se propague a los elementos padres
     e.stopPropagation()
 
     AjustesGrid.fAbrirCerrarPanel()
