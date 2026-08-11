@@ -9,6 +9,26 @@
     gap: 10px;
 }
 
+#ajusteGrid-panel>.btn-close {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 10px;
+
+    transition: all .3s ease-out;
+}
+
+#ajusteGrid-panel>.btn-close:hover {
+    background-color: #E2725B;
+    rotate: 180deg;
+}
+
 #ajusteGrid-number {
     width: 3ch;
     text-align: center;

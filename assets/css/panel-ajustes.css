@@ -4,6 +4,7 @@
     top: 80px;
     transform: translateX(-50%);
     padding: 10px;
+    padding-top: 15px;
     border-radius: 10px;
 
     visibility: hidden;
