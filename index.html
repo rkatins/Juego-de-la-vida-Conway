@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./assets/css/root.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/ajustes-grid.css">
+    <link rel="stylesheet" href="./assets/css/ajustes-velocidad.css">
+    <link rel="stylesheet" href="./assets/css/ajustes-pasos.css">
+    <link rel="stylesheet" href="./assets/css/ajustes-reiniciar.css">
     <link rel="stylesheet" href="./assets/css/contenedor_rejilla.css">
     <link rel="stylesheet" href="./assets/css/casilla.css">
     <link rel="stylesheet" href="./assets/css/btn.css">
@@ -19,7 +22,12 @@
     <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
 
     <!-- Se pone `defer` si el JS accede al DOM -->
-    <script src="./assets/js/AjustesGridController.js" defer></script>
+    <script src="./assets/js/LogicaJuegoDeLaVida.js?v=2" defer></script>
+    <script src="./assets/js/RejillaController.js?v=2" defer></script>
+    <script src="./assets/js/AjustesGridController.js?v=2" defer></script>
+    <script src="./assets/js/TiempoController.js?v=2" defer></script>
+    <script src="./assets/js/PasosController.js?v=2" defer></script>
+    <script src="./assets/js/ReiniciarController.js?v=2" defer></script>
 
     <title>Rejilla 128x128</title>
 </head>
@@ -45,17 +53,42 @@
                 </div>
             </div>
 
-            <div class="icon">
-                <div class="tooltip">Velocidad</div>
-                <img src="./assets/icons/timer.svg" class="icon-filter" alt="">
+            <div class="icon" id="AjustesVelocidad-icon">
+                <div id="AjustesVelocidad-tooltip" class="tooltip">Velocidad</div>
+                <img src="./assets/icons/timer.svg" class="icon-filter" alt="Velocidad">
+
+                <div id="ajusteVelocidad-panel" class="glass3d panel-ajustes">
+                    <img src="./assets/icons/x.svg" alt="" class="btn-close">
+                    <div class="controles-numero">
+                        <img id="ajusteVelocidad-btn-plus" src="./assets/icons/plus.svg" alt="" class="icon-filter">
+                        <input type="text" id="ajusteVelocidad-number" value="500">
+                        <img id="ajusteVelocidad-btn-minus" src="./assets/icons/minus.svg" alt="" class="icon-filter">
+                    </div>
+
+                    <input type="range" id="ajusteVelocidad-range" name="ajusteVelocidad-range" min="100" max="2000"
+                        value="500">
+                </div>
             </div>
-            <div class="icon">
-                <div class="tooltip">Anterior / Siguiente</div>
-                <img src="./assets/icons/list-video.svg" class="icon-filter" alt="">
+
+            <div class="icon" id="AjustesPasos-icon">
+                <div id="AjustesPasos-tooltip" class="tooltip">Anterior / Siguiente</div>
+                <img src="./assets/icons/list-video.svg" class="icon-filter" alt="Anterior / Siguiente">
+
+                <div id="ajustePasos-panel" class="glass3d panel-ajustes">
+                    <img src="./assets/icons/x.svg" alt="" class="btn-close">
+                    <div class="controles-numero">
+                        <img id="ajustePasos-btn-plus" src="./assets/icons/plus.svg" alt="" class="icon-filter">
+                        <input type="text" id="ajustePasos-number" value="1">
+                        <img id="ajustePasos-btn-minus" src="./assets/icons/minus.svg" alt="" class="icon-filter">
+                    </div>
+
+                    <input type="range" id="ajustePasos-range" name="ajustePasos-range" min="1" max="10" value="1">
+                </div>
             </div>
-            <div class="icon">
-                <div class="tooltip">Reiniciar</div>
-                <img src="./assets/icons/rotate-ccw.svg" id="btn-reiniciar-grid" class="icon-filter" alt="">
+
+            <div class="icon" id="AjustesReiniciar-icon" onclick="Reiniciar.fReiniciarJuego()">
+                <div id="AjustesReiniciar-tooltip" class="tooltip">Reiniciar</div>
+                <img src="./assets/icons/rotate-ccw.svg" id="btn-reiniciar-grid" class="icon-filter" alt="Reiniciar">
             </div>
         </div>
     </div>
