@@ -20,8 +20,8 @@ class RejillaController {
      * con un límite máximo de casillas seleccionadas (total / 2)
      */
     fGestionarMarcadoCasillas() {
-        const celdas = document.querySelectorAll('.celula');
-        const maxMarcadas = Math.floor(celdas.length / 2);
+        const celdas = document.querySelectorAll('.celula')
+        const maxMarcadas = Math.floor(celdas.length / 2)
 
         // Asocia un evento click a cada celda para marcarla o desmarcarla
         celdas.forEach(celda => {
@@ -160,9 +160,11 @@ function fDibujarRejilla(tamagno) {
         const miJuego = new LogicaJuegoDeLaVida(tamagno)
         miJuego.fGestionarMarcadoCasillas()
 
-        let btnReiniciar = document.getElementById('btn-reiniciar')
+        let btnReiniciar = document.getElementById('btn-reiniciar') || document.getElementById('btn-reiniciar-grid')
 
         // Asocia el evento click al botón de reinicio para vaciar y resetear el tablero.
-        btnReiniciar.onclick = () => miJuego.fReiniciarJuego()
+        if (btnReiniciar) {
+            btnReiniciar.onclick = () => miJuego.fReiniciarJuego()
+        }
     }
 }

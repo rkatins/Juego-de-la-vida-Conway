@@ -7,8 +7,8 @@ class LogicaJuegoDeLaVida {
      * con un límite máximo de casillas seleccionadas (total / 2)
      */
     fGestionarMarcadoCasillas() {
-        const celdas = document.querySelectorAll('.celula');
-        const maxMarcadas = Math.floor(celdas.length / 2);
+        const celdas = document.querySelectorAll('.celula')
+        const maxMarcadas = Math.floor(celdas.length / 2)
 
         // Asocia un evento click a cada celda para marcarla o desmarcarla
         celdas.forEach(celda => {

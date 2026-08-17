@@ -11,8 +11,8 @@ class ReiniciarController {
 
         // Limpiar visualmente las celdas en el HTML
         document.querySelectorAll('.celula.marcada').forEach(celda => {
-            celda.classList.remove('marcada');
-        });
+            celda.classList.remove('marcada')
+        })
 
         console.log("¡El juego ha sido reiniciado con éxito!")
     }
