@@ -1,4 +1,7 @@
 class PasosController {
+    // Varisblr booleano para saber el estado del juego
+    juegoPausado = false;
+
     /**
      * Sincroniza el valor de pasos.
      */
@@ -72,6 +75,16 @@ const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left')
 // btn_minus_ajustePasos.addEventListener('click', () => {
 //     Pasos.fDecrementarBtnMinus()
 // })
+
+btn_play_ajustePasos.addEventListener('click', () => {
+    if (Pasos.juegoPausado) {
+        btn_play_ajustePasos.src = "./assets/icons/play.svg"
+        Pasos.juegoPausado = false
+    } else {
+        btn_play_ajustePasos.src = "./assets/icons/pause.svg"
+        Pasos.juegoPausado = true
+    }
+})
 
 icon_ajustePasos.addEventListener('click', () => {
     console.log("Icono Pasos clickeado")
