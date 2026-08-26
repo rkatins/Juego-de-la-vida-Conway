@@ -14,7 +14,9 @@ class ReiniciarController {
             celda.classList.remove('marcada')
         })
 
-        console.log("¡El juego ha sido reiniciado con éxito!")
+        btn_play_ajustePasos.click()
+
+        // TODO: que se cierre el panel abierto
     }
 }
 
