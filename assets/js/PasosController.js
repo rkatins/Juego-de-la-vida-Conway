@@ -77,13 +77,8 @@ const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left')
 // })
 
 btn_play_ajustePasos.addEventListener('click', () => {
-    if (Pasos.juegoPausado) {
-        btn_play_ajustePasos.src = "./assets/icons/play.svg"
-        Pasos.juegoPausado = false
-    } else {
-        btn_play_ajustePasos.src = "./assets/icons/pause.svg"
-        Pasos.juegoPausado = true
-    }
+    Pasos.juegoPausado ? btn_play_ajustePasos.src = "./assets/icons/play.svg" : btn_play_ajustePasos.src = "./assets/icons/pause.svg"
+    Pasos.juegoPausado ? Pasos.juegoPausado = false : Pasos.juegoPausado = true
 })
 
 icon_ajustePasos.addEventListener('click', () => {
