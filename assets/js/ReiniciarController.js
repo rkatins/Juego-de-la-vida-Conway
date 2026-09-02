@@ -16,6 +16,12 @@ class ReiniciarController {
 
         Pasos.juegoPausado = true
         btn_play_ajustePasos.click()
+
+        NavBar.panelAbierto.forEach(panel => {
+            panel.classList.remove('activo')
+        })
+
+        NavBar.panelAbierto = []
     }
 }
 

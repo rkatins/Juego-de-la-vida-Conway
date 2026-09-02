@@ -8,6 +8,9 @@ class NavBarController {
 
         let panelPulsado = document.getElementById(panelId)
 
+        // Si el icono pulsado no tiene un panel asociado, "fuerza" la salida de la función
+        if (!panelPulsado) return
+
         // Guardar el panel pulsado en el array de paneles abiertos
         this.panelAbierto.push(panelPulsado)
 
