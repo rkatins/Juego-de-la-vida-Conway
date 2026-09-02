@@ -44,7 +44,7 @@ class TiempoController {
     }
 
     fAlternarToolTip() {
-        const tooltip_ajusteVelocidad = document.querySelector("#AjustesVelocidad-tooltip")
+        const tooltip_ajusteVelocidad = document.querySelector("#ajusteVelocidad-tooltip")
         const panel_ajusteVelocidad = document.querySelector("#ajusteVelocidad-panel")
 
         tooltip_ajusteVelocidad.style.visibility = panel_ajusteVelocidad.classList.contains("activo") ? "hidden" : ""
@@ -55,7 +55,7 @@ class TiempoController {
 const Tiempo = new TiempoController()
 
 // --- Event Listeners ---
-const icon_ajusteVelocidad = document.querySelector("#AjustesVelocidad-icon > img")
+const icon_ajusteVelocidad = document.querySelector("#ajusteVelocidad-icon > img")
 const btn_close_panelAjusteVelocidad = document.querySelector("#ajusteVelocidad-panel > .btn-close")
 const range_ajusteVelocidad = document.getElementById('ajusteVelocidad-range')
 const number_ajusteVelocidad = document.getElementById('ajusteVelocidad-number')
@@ -79,13 +79,11 @@ btn_minus_ajusteVelocidad.addEventListener('click', () => {
 })
 
 icon_ajusteVelocidad.addEventListener('click', () => {
-    console.log("Icono Velocidad clickeado")
     Tiempo.fAbrirCerrarPanel()
     Tiempo.fAlternarToolTip()
 })
 
 btn_close_panelAjusteVelocidad.addEventListener('click', (e) => {
-    console.log("Cerrar panel Velocidad clickeado")
     e.stopPropagation()
     Tiempo.fAbrirCerrarPanel()
     Tiempo.fAlternarToolTip()

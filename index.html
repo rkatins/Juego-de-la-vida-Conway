@@ -22,9 +22,10 @@
     <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
 
     <!-- Se pone `defer` si el JS accede al DOM -->
+    <script src="./assets/js/NavBarController.js" defer></script>
     <script src="./assets/js/LogicaJuegoDeLaVida.js?v=2" defer></script>
     <script src="./assets/js/RejillaController.js?v=2" defer></script>
-    <script src="./assets/js/AjustesGridController.js?v=2" defer></script>
+    <script src="./assets/js/AjusteGridController.js?v=2" defer></script>
     <script src="./assets/js/TiempoController.js?v=2" defer></script>
     <script src="./assets/js/PasosController.js?v=2" defer></script>
     <script src="./assets/js/ReiniciarController.js?v=2" defer></script>
@@ -35,8 +36,8 @@
 <body>
     <div id="navBar">
         <div id="navBar-menu" class="glass3d">
-            <div class="icon" id="AjustesGrid-icon">
-                <div id="AjustesGrid-tooltip" class="tooltip">Ajustes Grid</div>
+            <div class="icon" id="ajusteGrid-icon">
+                <div id="ajusteGrid-tooltip" class="tooltip">Ajustes Grid</div>
                 <img src="./assets/icons/grid-3x3.svg" class="icon-filter" alt="Ajustes">
 
                 <div id="ajusteGrid-panel" class="glass3d panel-ajustes">
@@ -53,8 +54,8 @@
                 </div>
             </div>
 
-            <div class="icon" id="AjustesVelocidad-icon">
-                <div id="AjustesVelocidad-tooltip" class="tooltip">Velocidad</div>
+            <div class="icon" id="ajusteVelocidad-icon">
+                <div id="ajusteVelocidad-tooltip" class="tooltip">Velocidad</div>
                 <img src="./assets/icons/timer.svg" class="icon-filter" alt="Velocidad">
 
                 <div id="ajusteVelocidad-panel" class="glass3d panel-ajustes">
@@ -70,8 +71,8 @@
                 </div>
             </div>
 
-            <div class="icon" id="AjustesPasos-icon">
-                <div id="AjustesPasos-tooltip" class="tooltip">Anterior / Siguiente</div>
+            <div class="icon" id="ajustePasos-icon">
+                <div id="ajustePasos-tooltip" class="tooltip">Anterior / Siguiente</div>
                 <img src="./assets/icons/list-video.svg" class="icon-filter" alt="Anterior / Siguiente">
 
                 <div id="ajustePasos-panel" class="glass3d panel-ajustes">
@@ -84,8 +85,8 @@
                 </div>
             </div>
 
-            <div class="icon" id="AjustesReiniciar-icon" onclick="Reiniciar.fReiniciarJuego()">
-                <div id="AjustesReiniciar-tooltip" class="tooltip">Reiniciar</div>
+            <div class="icon" id="ajusteReiniciar-icon" onclick="Reiniciar.fReiniciarJuego()">
+                <div id="ajusteReiniciar-tooltip" class="tooltip">Reiniciar</div>
                 <img src="./assets/icons/rotate-ccw.svg" id="btn-reiniciar-grid" class="icon-filter" alt="Reiniciar">
             </div>
         </div>

@@ -16,8 +16,6 @@ class ReiniciarController {
 
         Pasos.juegoPausado = true
         btn_play_ajustePasos.click()
-
-        // TODO: que se cierre el panel abierto
     }
 }
 

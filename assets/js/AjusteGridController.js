@@ -100,7 +100,7 @@ class AjustesGridController {
      * Alterna la visibilidad del ToolTip
      */
     fAlternarToolTip() {
-        const tooltip_ajusteGrid = document.querySelector("#AjustesGrid-tooltip")
+        const tooltip_ajusteGrid = document.querySelector("#ajusteGrid-tooltip")
         const panel_ajusteGrid = document.querySelector("#ajusteGrid-panel")
 
         tooltip_ajusteGrid.style.visibility = panel_ajusteGrid.classList.contains("activo") ? "hidden" : ""
@@ -122,7 +122,7 @@ class AjustesGridController {
 const AjustesGrid = new AjustesGridController()
 
 // --- addEventListener ---
-const icon_ajusteGrid = document.querySelector("#AjustesGrid-icon > img")
+const icon_ajusteGrid = document.querySelector("#ajusteGrid-icon > img")
 const btn_close_panelAjusteGrid = document.querySelector("#ajusteGrid-panel > .btn-close")
 const range_ajusteGrid = document.getElementById('ajusteGrid-range')
 const number_ajusteGrid = document.getElementById('ajusteGrid-number')

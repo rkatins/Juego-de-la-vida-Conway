@@ -47,7 +47,7 @@ class PasosController {
     }
 
     fAlternarToolTip() {
-        const tooltip_ajustePasos = document.querySelector("#AjustesPasos-tooltip")
+        const tooltip_ajustePasos = document.querySelector("#ajustePasos-tooltip")
         const panel_ajustePasos = document.querySelector("#ajustePasos-panel")
 
         tooltip_ajustePasos.style.visibility = panel_ajustePasos.classList.contains("activo") ? "hidden" : ""
@@ -58,7 +58,7 @@ class PasosController {
 const Pasos = new PasosController()
 
 // --- Event Listeners ---
-const icon_ajustePasos = document.querySelector("#AjustesPasos-icon > img")
+const icon_ajustePasos = document.querySelector("#ajustePasos-icon > img")
 const btn_close_panelAjustePasos = document.querySelector("#ajustePasos-panel > .btn-close")
 const btn_play_ajustePasos = document.getElementById('ajustePasos-btn-play')
 const btn_right_ajustePasos = document.getElementById('ajustePasos-btn-right')
@@ -82,13 +82,11 @@ btn_play_ajustePasos.addEventListener('click', () => {
 })
 
 icon_ajustePasos.addEventListener('click', () => {
-    console.log("Icono Pasos clickeado")
     Pasos.fAbrirCerrarPanel()
     Pasos.fAlternarToolTip()
 })
 
 btn_close_panelAjustePasos.addEventListener('click', (e) => {
-    console.log("Cerrar panel Pasos clickeado")
     e.stopPropagation()
     Pasos.fAbrirCerrarPanel()
     Pasos.fAlternarToolTip()
