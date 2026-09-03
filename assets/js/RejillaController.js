@@ -164,7 +164,7 @@ function fDibujarRejilla(tamagno) {
 
         // Asocia el evento click al botón de reinicio para vaciar y resetear el tablero.
         if (btnReiniciar) {
-            btnReiniciar.onclick = () => miJuego.fReiniciarJuego()
+            btnReiniciar.onclick = () => Reiniciar.fReiniciarJuego()
         }
     }
 }

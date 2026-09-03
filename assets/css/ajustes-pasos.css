@@ -1,12 +1,27 @@
 #ajustePasos-panel {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    min-width: 125px;
+    min-height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#ajustePasos-panel>.controles-numero {
+#ajustePasos-panel>.controles-multimedia {
     display: flex;
-    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#ajustePasos-panel>.controles-multimedia>img:nth-child(odd) {
+    width: 45px;
+    height: 45px;
+}
+
+#ajustePasos-panel>.controles-multimedia>img:nth-child(even) {
+    width: 30px;
+    height: 30px;
 }
 
 #ajustePasos-panel>.btn-close {
@@ -27,24 +42,4 @@
 #ajustePasos-panel>.btn-close:hover {
     background-color: #E2725B;
     rotate: 180deg;
-}
-
-#ajustePasos-number {
-    width: 3ch;
-    text-align: center;
-    font-size: 20px;
-
-    background: none;
-    border: none;
-    outline: none;
-}
-
-#ajustePasos-range {
-    grid-row-start: 2;
-
-    align-self: center;
-
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
 }

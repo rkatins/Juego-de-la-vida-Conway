@@ -1,4 +1,7 @@
 class PasosController {
+    // Varisblr booleano para saber el estado del juego
+    juegoPausado = false;
+
     /**
      * Sincroniza el valor de pasos.
      */
@@ -44,7 +47,7 @@ class PasosController {
     }
 
     fAlternarToolTip() {
-        const tooltip_ajustePasos = document.querySelector("#AjustesPasos-tooltip")
+        const tooltip_ajustePasos = document.querySelector("#ajustePasos-tooltip")
         const panel_ajustePasos = document.querySelector("#ajustePasos-panel")
 
         tooltip_ajustePasos.style.visibility = panel_ajustePasos.classList.contains("activo") ? "hidden" : ""
@@ -55,37 +58,35 @@ class PasosController {
 const Pasos = new PasosController()
 
 // --- Event Listeners ---
-const icon_ajustePasos = document.querySelector("#AjustesPasos-icon > img")
+const icon_ajustePasos = document.querySelector("#ajustePasos-icon > img")
 const btn_close_panelAjustePasos = document.querySelector("#ajustePasos-panel > .btn-close")
-const range_ajustePasos = document.getElementById('ajustePasos-range')
-const number_ajustePasos = document.getElementById('ajustePasos-number')
-const btn_plus_ajustePasos = document.getElementById('ajustePasos-btn-plus')
-const btn_minus_ajustePasos = document.getElementById('ajustePasos-btn-minus')
+const btn_play_ajustePasos = document.getElementById('ajustePasos-btn-play')
+const btn_right_ajustePasos = document.getElementById('ajustePasos-btn-right')
+const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left')
 
-range_ajustePasos.addEventListener('input', () => {
-    Pasos.fAjustarPasos(range_ajustePasos, number_ajustePasos)
-})
+// number_ajustePasos.addEventListener('input', () => {
+//     Pasos.fChangeInputNumber()
+// })
 
-number_ajustePasos.addEventListener('input', () => {
-    Pasos.fChangeInputNumber()
-})
+// btn_plus_ajustePasos.addEventListener('click', () => {
+//     Pasos.fIncrementarBtnPlus()
+// })
 
-btn_plus_ajustePasos.addEventListener('click', () => {
-    Pasos.fIncrementarBtnPlus()
-})
+// btn_minus_ajustePasos.addEventListener('click', () => {
+//     Pasos.fDecrementarBtnMinus()
+// })
 
-btn_minus_ajustePasos.addEventListener('click', () => {
-    Pasos.fDecrementarBtnMinus()
+btn_play_ajustePasos.addEventListener('click', () => {
+    Pasos.juegoPausado ? btn_play_ajustePasos.src = "./assets/icons/play.svg" : btn_play_ajustePasos.src = "./assets/icons/pause.svg"
+    Pasos.juegoPausado ? Pasos.juegoPausado = false : Pasos.juegoPausado = true
 })
 
 icon_ajustePasos.addEventListener('click', () => {
-    console.log("Icono Pasos clickeado")
     Pasos.fAbrirCerrarPanel()
     Pasos.fAlternarToolTip()
 })
 
 btn_close_panelAjustePasos.addEventListener('click', (e) => {
-    console.log("Cerrar panel Pasos clickeado")
     e.stopPropagation()
     Pasos.fAbrirCerrarPanel()
     Pasos.fAlternarToolTip()

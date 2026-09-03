@@ -14,7 +14,14 @@ class ReiniciarController {
             celda.classList.remove('marcada')
         })
 
-        console.log("¡El juego ha sido reiniciado con éxito!")
+        Pasos.juegoPausado = true
+        btn_play_ajustePasos.click()
+
+        NavBar.panelAbierto.forEach(panel => {
+            panel.classList.remove('activo')
+        })
+
+        NavBar.panelAbierto = []
     }
 }
 
