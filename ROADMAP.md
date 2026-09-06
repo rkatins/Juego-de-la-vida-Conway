@@ -39,7 +39,7 @@
 
 19. [x] Al pulsar sobre reiniciar cerrar cualquier posible panel abierto
 
-20. [WIP] Añadir una pequeña animación visual en los iconos del navBar al pasar por encima (ej. scale 1.2)
+20. [x] Añadir una pequeña animación visual en los iconos del navBar al pasar por encima (ej. scale 1.2)
 
 21. [x] Implementar nuevo diseño en `index.css`
 
