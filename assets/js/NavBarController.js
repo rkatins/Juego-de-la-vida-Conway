@@ -24,7 +24,7 @@ class NavBarController {
 
 const NavBar = new NavBarController()
 
-const iconos = document.querySelectorAll('.icon > img')
+const iconos = document.querySelectorAll('.icon > svg')
 
 iconos.forEach(icono => {
     icono.addEventListener('click', (e) => {

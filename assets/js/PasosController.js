@@ -58,7 +58,7 @@ class PasosController {
 const Pasos = new PasosController()
 
 // --- Event Listeners ---
-const icon_ajustePasos = document.querySelector("#ajustePasos-icon > img")
+const icon_ajustePasos = document.querySelector("#ajustePasos-icon > svg")
 const btn_close_panelAjustePasos = document.querySelector("#ajustePasos-panel > .btn-close")
 const btn_play_ajustePasos = document.getElementById('ajustePasos-btn-play')
 const btn_right_ajustePasos = document.getElementById('ajustePasos-btn-right')
@@ -77,8 +77,11 @@ const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left')
 // })
 
 btn_play_ajustePasos.addEventListener('click', () => {
-    Pasos.juegoPausado ? btn_play_ajustePasos.src = "./assets/icons/play.svg" : btn_play_ajustePasos.src = "./assets/icons/pause.svg"
-    Pasos.juegoPausado ? Pasos.juegoPausado = false : Pasos.juegoPausado = true
+    const useElem = btn_play_ajustePasos.querySelector('use')
+    if (useElem) {
+        useElem.setAttribute('href', Pasos.juegoPausado ? "./assets/icons/icons.svg#play" : "./assets/icons/icons.svg#pause")
+    }
+    Pasos.juegoPausado = !Pasos.juegoPausado
 })
 
 icon_ajustePasos.addEventListener('click', () => {
