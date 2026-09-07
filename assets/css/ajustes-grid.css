@@ -7,6 +7,14 @@
 #ajusteGrid-panel>.controles-numero {
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+
+#ajusteGrid-panel>.controles-numero>img,
+#ajusteGrid-panel>.controles-numero>svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 #ajusteGrid-panel>.btn-close {
