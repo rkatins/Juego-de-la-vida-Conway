@@ -55,7 +55,7 @@ class TiempoController {
 const Tiempo = new TiempoController()
 
 // --- Event Listeners ---
-const icon_ajusteVelocidad = document.querySelector("#ajusteVelocidad-icon > img")
+const icon_ajusteVelocidad = document.querySelector("#ajusteVelocidad-icon > svg")
 const btn_close_panelAjusteVelocidad = document.querySelector("#ajusteVelocidad-panel > .btn-close")
 const range_ajusteVelocidad = document.getElementById('ajusteVelocidad-range')
 const number_ajusteVelocidad = document.getElementById('ajusteVelocidad-number')

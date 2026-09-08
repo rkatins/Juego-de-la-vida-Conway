@@ -28,14 +28,14 @@
     gap: 15px;
 }
 
-#navBar-menu>.icon>img {
+#navBar-menu>.icon>svg {
     width: 50px;
     height: 50px;
 
     transition: all .3s ease-in-out;
 }
 
-#navBar-menu>.icon>img:hover {
+#navBar-menu>.icon>svg:hover {
     scale: 1.2;
 }
 

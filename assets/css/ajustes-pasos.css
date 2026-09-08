@@ -14,12 +14,16 @@
     align-items: center;
 }
 
-#ajustePasos-panel>.controles-multimedia>img:nth-child(odd) {
+#ajustePasos-panel>.controles-multimedia>svg {
+    cursor: pointer;
+}
+
+#ajustePasos-panel>.controles-multimedia>svg:nth-child(odd) {
     width: 45px;
     height: 45px;
 }
 
-#ajustePasos-panel>.controles-multimedia>img:nth-child(even) {
+#ajustePasos-panel>.controles-multimedia>svg:nth-child(even) {
     width: 30px;
     height: 30px;
 }

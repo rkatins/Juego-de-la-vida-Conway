@@ -51,6 +51,13 @@
 > - Slider para controlar la velocidad (ms por generación)
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
+23. [ ] Comprimir los iconos del navBar en un solo sprite para optimizar la carga de la web
+>```JS
+> <svg with="36" height="36">
+>   <use href="./assets/icons/sprite.svg#idIcono" />
+> </svg>
+>```
+
 23. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
 
 24. [ ] Implementar control de velocidad (slider de rango)

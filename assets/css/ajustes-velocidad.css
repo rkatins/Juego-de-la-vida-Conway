@@ -7,6 +7,13 @@
 #ajusteVelocidad-panel>.controles-numero {
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+
+#ajusteVelocidad-panel>.controles-numero>svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 #ajusteVelocidad-panel>.btn-close {

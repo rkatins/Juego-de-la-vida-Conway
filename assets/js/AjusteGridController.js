@@ -122,7 +122,7 @@ class AjustesGridController {
 const AjustesGrid = new AjustesGridController()
 
 // --- addEventListener ---
-const icon_ajusteGrid = document.querySelector("#ajusteGrid-icon > img")
+const icon_ajusteGrid = document.querySelector("#ajusteGrid-icon > svg")
 const btn_close_panelAjusteGrid = document.querySelector("#ajusteGrid-panel > .btn-close")
 const range_ajusteGrid = document.getElementById('ajusteGrid-range')
 const number_ajusteGrid = document.getElementById('ajusteGrid-number')

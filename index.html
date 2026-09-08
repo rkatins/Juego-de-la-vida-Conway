@@ -38,14 +38,22 @@
         <div id="navBar-menu" class="glass3d">
             <div class="icon" id="ajusteGrid-icon">
                 <div id="ajusteGrid-tooltip" class="tooltip">Ajustes Grid</div>
-                <img src="./assets/icons/grid-3x3.svg" class="icon-filter" alt="Ajustes">
+                <svg class="icon-filter" alt="Ajustes">
+                    <use href="./assets/icons/icons.svg#grid-3x3"></use>
+                </svg>
 
                 <div id="ajusteGrid-panel" class="glass3d panel-ajustes">
-                    <img src="./assets/icons/x.svg" alt="" class="btn-close">
+                    <svg class="btn-close">
+                        <use href="./assets/icons/icons.svg#x"></use>
+                    </svg>
                     <div class="controles-numero">
-                        <img id="ajusteGrid-btn-plus" src="./assets/icons/plus.svg" alt="" class="icon-filter">
+                        <svg id="ajusteGrid-btn-plus" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#plus"></use>
+                        </svg>
                         <input type="text" id="ajusteGrid-number" value="10">
-                        <img id="ajusteGrid-btn-minus" src="./assets/icons/minus.svg" alt="" class="icon-filter">
+                        <svg id="ajusteGrid-btn-minus" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#minus"></use>
+                        </svg>
                     </div>
 
                     <input type="range" id="ajusteGrid-range" name="ajusteGrid-range" min="10" value="10"
@@ -56,14 +64,22 @@
 
             <div class="icon" id="ajusteVelocidad-icon">
                 <div id="ajusteVelocidad-tooltip" class="tooltip">Velocidad</div>
-                <img src="./assets/icons/timer.svg" class="icon-filter" alt="Velocidad">
+                <svg class="icon-filter" alt="Velocidad">
+                    <use href="./assets/icons/icons.svg#timer"></use>
+                </svg>
 
                 <div id="ajusteVelocidad-panel" class="glass3d panel-ajustes">
-                    <img src="./assets/icons/x.svg" alt="" class="btn-close">
+                    <svg class="btn-close">
+                        <use href="./assets/icons/icons.svg#x"></use>
+                    </svg>
                     <div class="controles-numero">
-                        <img id="ajusteVelocidad-btn-plus" src="./assets/icons/plus.svg" alt="" class="icon-filter">
+                        <svg id="ajusteVelocidad-btn-plus" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#plus"></use>
+                        </svg>
                         <input type="text" id="ajusteVelocidad-number" value="500">
-                        <img id="ajusteVelocidad-btn-minus" src="./assets/icons/minus.svg" alt="" class="icon-filter">
+                        <svg id="ajusteVelocidad-btn-minus" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#minus"></use>
+                        </svg>
                     </div>
 
                     <input type="range" id="ajusteVelocidad-range" name="ajusteVelocidad-range" min="100" max="2000"
@@ -73,21 +89,33 @@
 
             <div class="icon" id="ajustePasos-icon">
                 <div id="ajustePasos-tooltip" class="tooltip">Anterior / Siguiente</div>
-                <img src="./assets/icons/list-video.svg" class="icon-filter" alt="Anterior / Siguiente">
+                <svg class="icon-filter" alt="Anterior / Siguiente">
+                    <use href="./assets/icons/icons.svg#list-video"></use>
+                </svg>
 
                 <div id="ajustePasos-panel" class="glass3d panel-ajustes">
-                    <img src="./assets/icons/x.svg" alt="" class="btn-close">
+                    <svg class="btn-close">
+                        <use href="./assets/icons/icons.svg#x"></use>
+                    </svg>
                     <div class="controles-multimedia">
-                        <img id="ajustePasos-btn-left" src="./assets/icons/chevron-left.svg" alt="" class="icon-filter">
-                        <img id="ajustePasos-btn-play" src="./assets/icons/play.svg" alt="" class="icon-filter">
-                        <img id="ajustePasos-btn-right" src="./assets/icons/chevron-right.svg" alt="" class="icon-filter">
+                        <svg id="ajustePasos-btn-left" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#chevron-left"></use>
+                        </svg>
+                        <svg id="ajustePasos-btn-play" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#play"></use>
+                        </svg>
+                        <svg id="ajustePasos-btn-right" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#chevron-right"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
 
             <div class="icon" id="ajusteReiniciar-icon" onclick="Reiniciar.fReiniciarJuego()">
                 <div id="ajusteReiniciar-tooltip" class="tooltip">Reiniciar</div>
-                <img src="./assets/icons/rotate-ccw.svg" id="btn-reiniciar-grid" class="icon-filter" alt="Reiniciar">
+                <svg id="btn-reiniciar-grid" class="icon-filter" alt="Reiniciar">
+                    <use href="./assets/icons/icons.svg#rotate-ccw"></use>
+                </svg>
             </div>
         </div>
     </div>
