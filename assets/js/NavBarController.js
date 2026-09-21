@@ -9,11 +9,25 @@ class NavBarController {
         let panelPulsado = document.getElementById(panelId)
 
         /**
+         * Función auxiliar para cerrar un panel y restaurar su tooltip.
+         * Al cerrar un panel desde aquí, nadie le quitaba los estilos en línea (style="visibility: hidden...") al tooltip anterior,
+         * lo que impedía que el :hover de CSS volviera a mostrarlo. Al limpiar estos estilos en línea, el tooltip vuelve a funcionar con normalidad.
+         */
+        const fCerrarPanel = (panel) => {
+            panel.classList.remove('activo')
+            const tooltip = panel.parentElement.querySelector('.tooltip')
+            if (tooltip) {
+                tooltip.style.visibility = ""
+                tooltip.style.opacity = ""
+            }
+        }
+
+        /**
          * Si el icono pulsado no tiene un panel asociado (como el botón Reiniciar),
-         * cerramos cualquier panel que estuviera abierto previamente para no dejarlo visible.
+         * cerramos cualquier panel que estuviera abierto previamente y restauramos su tooltip.
          */
         if (!panelPulsado) {
-            this.panelAbierto.forEach(panel => panel.classList.remove('activo'))
+            this.panelAbierto.forEach(panel => fCerrarPanel(panel))
             this.panelAbierto = []
             return
         }
@@ -30,9 +44,9 @@ class NavBarController {
 
         /**
          * Si se abre un panel nuevo, cerramos cualquier otro panel que estuviera abierto
-         * previamente y registramos el actual.
+         * previamente y restauramos su tooltip para que vuelva a mostrarse en :hover.
          */
-        this.panelAbierto.forEach(panel => panel.classList.remove('activo'))
+        this.panelAbierto.forEach(panel => fCerrarPanel(panel))
         this.panelAbierto = [panelPulsado]
     }
 }
