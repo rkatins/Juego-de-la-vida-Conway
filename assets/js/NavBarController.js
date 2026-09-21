@@ -8,8 +8,17 @@ class NavBarController {
 
         let panelPulsado = document.getElementById(panelId)
 
-        // Si el icono pulsado no tiene un panel asociado, "fuerza" la salida de la función
-        if (!panelPulsado) return
+        /**
+         * Si el icono pulsado no tiene un panel asociado (como el botón Reiniciar),
+         * cerramos cualquier panel que estuviera abierto previamente para no dejarlo visible.
+         */
+        if (!panelPulsado) {
+            if (this.panelAbierto.length > 0) {
+                this.panelAbierto[0].classList.remove('activo')
+                this.panelAbierto.shift()
+            }
+            return
+        }
 
         // Guardar el panel pulsado en el array de paneles abiertos
         this.panelAbierto.push(panelPulsado)
@@ -36,7 +45,7 @@ iconos.forEach(icono => {
  * TODO: Segmentar el id del elemento padre (se llama: %-icon), haciendo uso del caracter separador `-` y luego concatenar el id del panel correspondiente (se llama: %-panel)
 // 1. Tienes el ID del elemento padre
 const iconId = "menu-icon"; 
-
+ 
 // 2. Segmentas por el guion
 const partes = iconId.split("-"); // Devuelve el array: ["menu", "icon"]
 
