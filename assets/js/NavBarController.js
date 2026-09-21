@@ -13,21 +13,27 @@ class NavBarController {
          * cerramos cualquier panel que estuviera abierto previamente para no dejarlo visible.
          */
         if (!panelPulsado) {
-            if (this.panelAbierto.length > 0) {
-                this.panelAbierto[0].classList.remove('activo')
-                this.panelAbierto.shift()
-            }
+            this.panelAbierto.forEach(panel => panel.classList.remove('activo'))
+            this.panelAbierto = []
             return
         }
 
-        // Guardar el panel pulsado en el array de paneles abiertos
-        this.panelAbierto.push(panelPulsado)
-
-        // Si hay más de un panel abierto, cierra el primero (el más antiguo) y lo elimina del array
-        if (this.panelAbierto.length > 1) {
-            this.panelAbierto[0].classList.remove('activo')
-            this.panelAbierto.shift()
+        /**
+         * Si el panel pulsado ya está abierto, el usuario lo está cerrando con su propio
+         * método toggle ('fAbrirCerrarPanel'). Vaciamos el registro sin quitar la clase 'activo'
+         * aquí para evitar que el toggle lo vuelva a abrir inmediatamente por colisión.
+         */
+        if (panelPulsado.classList.contains('activo')) {
+            this.panelAbierto = []
+            return
         }
+
+        /**
+         * Si se abre un panel nuevo, cerramos cualquier otro panel que estuviera abierto
+         * previamente y registramos el actual.
+         */
+        this.panelAbierto.forEach(panel => panel.classList.remove('activo'))
+        this.panelAbierto = [panelPulsado]
     }
 }
 
