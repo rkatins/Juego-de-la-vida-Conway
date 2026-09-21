@@ -3,23 +3,21 @@
 
     top: 80px;
     left: 50%;
-    transform: translate(-50%, 10px);
+    transform: translate(-50%, 8px);
     padding: 10px;
     padding-top: 15px;
     border-radius: 10px;
 
     visibility: hidden;
-    opacity: 0;
+    pointer-events: none;
 
     border: 1px solid #ccc;
 
-    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s;
 }
 
 .panel-ajustes.activo {
     visibility: visible;
-    opacity: 1;
+    pointer-events: auto;
     transform: translate(-50%, 0);
 }
