@@ -86,3 +86,11 @@
     opacity: 1;
     visibility: visible;
 }
+
+
+
+/* LA CLAVE: Cuando pasas el ratón por un icono, este se vuelve EL REY absoluto (Capa 50).
+   Su tooltip siempre se pintará por encima de cualquier panel abierto en otro lado. */
+.icon:hover {
+    z-index: 50;
+}
