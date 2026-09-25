@@ -17,7 +17,12 @@ class ReiniciarController {
         Pasos.juegoPausado = true
         btn_play_ajustePasos.click()
 
-        NavBar.panelAbierto.forEach(panel => {
+        /**
+         * Se seleccionan todos los paneles directamente desde el DOM (.panel-ajustes)
+         * para garantizar su cierre sin depender del estado del array `NavBar.panelAbierto`,
+         * el cual puede desincronizarse al abrir/cerrar paneles de forma individual.
+         */
+        document.querySelectorAll('.panel-ajustes').forEach(panel => {
             panel.classList.remove('activo')
         })
 

@@ -8,17 +8,46 @@ class NavBarController {
 
         let panelPulsado = document.getElementById(panelId)
 
-        // Si el icono pulsado no tiene un panel asociado, "fuerza" la salida de la función
-        if (!panelPulsado) return
-
-        // Guardar el panel pulsado en el array de paneles abiertos
-        this.panelAbierto.push(panelPulsado)
-
-        // Si hay más de un panel abierto, cierra el primero (el más antiguo) y lo elimina del array
-        if (this.panelAbierto.length > 1) {
-            this.panelAbierto[0].classList.remove('activo')
-            this.panelAbierto.shift()
+        /**
+         * Función auxiliar para cerrar un panel y restaurar su tooltip.
+         * Al cerrar un panel desde aquí, nadie le quitaba los estilos en línea (style="visibility: hidden...") al tooltip anterior,
+         * lo que impedía que el :hover de CSS volviera a mostrarlo. Al limpiar estos estilos en línea, el tooltip vuelve a funcionar con normalidad.
+         */
+        const fCerrarPanel = (panel) => {
+            panel.classList.remove('activo')
+            const tooltip = panel.parentElement.querySelector('.tooltip')
+            if (tooltip) {
+                tooltip.style.visibility = ""
+                tooltip.style.opacity = ""
+            }
         }
+
+        /**
+         * Si el icono pulsado no tiene un panel asociado (como el botón Reiniciar),
+         * cerramos cualquier panel que estuviera abierto previamente y restauramos su tooltip.
+         */
+        if (!panelPulsado) {
+            this.panelAbierto.forEach(panel => fCerrarPanel(panel))
+            this.panelAbierto = []
+            return
+        }
+
+        /**
+         * Si el panel pulsado ya está abierto, el usuario lo está cerrando con su propio
+         * método toggle ('fAbrirCerrarPanel'). Vaciamos el registro sin quitar la clase 'activo'
+         * aquí para evitar que el toggle lo vuelva a abrir inmediatamente por colisión.
+         */
+        if (panelPulsado.classList.contains('activo')) {
+            this.panelAbierto = []
+            return
+        }
+
+        /**
+         * Si se abre un panel nuevo, cerramos cualquier otro panel que estuviera abierto
+         * previamente y restauramos su tooltip para que vuelva a mostrarse en :hover.
+         */
+        this.panelAbierto.forEach(panel => fCerrarPanel(panel))
+        this.panelAbierto = [panelPulsado]
     }
 }
 
@@ -36,7 +65,7 @@ iconos.forEach(icono => {
  * TODO: Segmentar el id del elemento padre (se llama: %-icon), haciendo uso del caracter separador `-` y luego concatenar el id del panel correspondiente (se llama: %-panel)
 // 1. Tienes el ID del elemento padre
 const iconId = "menu-icon"; 
-
+ 
 // 2. Segmentas por el guion
 const partes = iconId.split("-"); // Devuelve el array: ["menu", "icon"]
 

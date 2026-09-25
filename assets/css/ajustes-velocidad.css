@@ -28,7 +28,7 @@
 
     border-radius: 10px;
 
-    transition: all .3s ease-out;
+    transition: background-color 0.2s ease-out, rotate 0.2s ease-out;
 }
 
 #ajusteVelocidad-panel>.btn-close:hover {
