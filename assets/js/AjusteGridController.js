@@ -35,15 +35,13 @@ class AjustesGridController {
      * desencadena el redibujado de la cuadrícula en el DOM, actualizando además la variable CSS.
      * 
      * @param {HTMLElement} dar - El elemento de entrada que origina el cambio de valor.
-     * @param {HTMLElement} recibir - El elemento de entrada que recibe el valor sincronizado.
      */
-    fAjustarTamagnoGrid(dar, recibir) {
-        recibir.value = dar.value
+    fAjustarTamagnoGrid() {
 
-        fDibujarRejilla(dar.value)
+        fDibujarRejilla(number_ajusteGrid.value)
 
         // Modificamos directamente la variable CSS --grid-size del DOM
-        document.documentElement.style.setProperty('--grid-size', dar.value)
+        document.documentElement.style.setProperty('--grid-size', number_ajusteGrid.value)
     }
 
     /**
@@ -53,10 +51,12 @@ class AjustesGridController {
     fIncrementarBtnPlus() {
         let val = parseInt(number_ajusteGrid.value) || 10
         const maxVal = window.maxCeldas || 256
+
         if (val + 1 <= maxVal) {
             number_ajusteGrid.value = val + 1
             range_ajusteGrid.value = val + 1
-            // AjustesGrid.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+
+            AjustesGrid.fAjustarTamagnoGrid()
         }
     }
 
@@ -66,10 +66,12 @@ class AjustesGridController {
      */
     fDecrementarBtnMinus() {
         let val = parseInt(number_ajusteGrid.value) || 10
+
         if (val - 1 >= 10) {
             number_ajusteGrid.value = val - 1
             range_ajusteGrid.value = val - 1
-            // AjustesGrid.fAjustarTamagno(number_ajusteGrid, range_ajusteGrid)
+
+            AjustesGrid.fAjustarTamagnoGrid()
         }
     }
 
