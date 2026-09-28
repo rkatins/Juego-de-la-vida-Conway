@@ -1,0 +1,357 @@
+/* From Uiverse.io by whoisyourdeadie */
+.matrix-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.matrix-pattern {
+    position: relative;
+    width: 400px;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.matrix-column {
+    position: absolute;
+    top: -100%;
+    width: 9px;
+    height: 100%;
+    font-size: 8px;
+    line-height: 9px;
+    font-weight: bold;
+    animation: fall linear infinite;
+    white-space: nowrap;
+}
+
+.matrix-column::before {
+    content: "7#Ñ8w!9X2$P7M%4R5&J3Q*0V6?Z8Y¡2N4¿B9F1D5T";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom,
+            #ffffff 0%,
+            #ffffff 5%,
+            #00ff41 10%,
+            #00ff41 20%,
+            #00dd33 30%,
+            #00bb22 40%,
+            #009911 50%,
+            #007700 60%,
+            #005500 70%,
+            #003300 80%,
+            rgba(0, 255, 65, 0.5) 90%,
+            transparent 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    -webkit-text-orientation: upright;
+    letter-spacing: 0.5px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.matrix-column:nth-child(1) {
+    left: 0px;
+    animation-delay: -1.2s;
+    animation-duration: 1.5s;
+}
+
+.matrix-column:nth-child(2) {
+    left: 10px;
+    animation-delay: -1.6s;
+    animation-duration: 2.0s;
+}
+
+.matrix-column:nth-child(3) {
+    left: 20px;
+    animation-delay: -0.9s;
+    animation-duration: 1.3s;
+}
+
+.matrix-column:nth-child(4) {
+    left: 30px;
+    animation-delay: -1.4s;
+    animation-duration: 1.8s;
+}
+
+.matrix-column:nth-child(5) {
+    left: 40px;
+    animation-delay: -0.7s;
+    animation-duration: 1.5s;
+}
+
+.matrix-column:nth-child(6) {
+    left: 50px;
+    animation-delay: -1.9s;
+    animation-duration: 2.2s;
+}
+
+.matrix-column:nth-child(7) {
+    left: 60px;
+    animation-delay: -1.0s;
+    animation-duration: 1.4s;
+}
+
+.matrix-column:nth-child(8) {
+    left: 70px;
+    animation-delay: -1.3s;
+    animation-duration: 1.6s;
+}
+
+.matrix-column:nth-child(9) {
+    left: 80px;
+    animation-delay: -1.7s;
+    animation-duration: 1.9s;
+}
+
+.matrix-column:nth-child(10) {
+    left: 90px;
+    animation-delay: -0.9s;
+    animation-duration: 1.3s;
+}
+
+.matrix-column:nth-child(11) {
+    left: 100px;
+    animation-delay: -1.8s;
+    animation-duration: 2.1s;
+}
+
+.matrix-column:nth-child(12) {
+    left: 110px;
+    animation-delay: -1.1s;
+    animation-duration: 1.5s;
+}
+
+.matrix-column:nth-child(13) {
+    left: 120px;
+    animation-delay: -1.5s;
+    animation-duration: 1.8s;
+}
+
+.matrix-column:nth-child(14) {
+    left: 130px;
+    animation-delay: -1.3s;
+    animation-duration: 1.4s;
+}
+
+.matrix-column:nth-child(15) {
+    left: 140px;
+    animation-delay: -1.8s;
+    animation-duration: 2.0s;
+}
+
+.matrix-column:nth-child(16) {
+    left: 150px;
+    animation-delay: -1.4s;
+    animation-duration: 1.6s;
+}
+
+.matrix-column:nth-child(17) {
+    left: 160px;
+    animation-delay: -1.6s;
+    animation-duration: 1.8s;
+}
+
+.matrix-column:nth-child(18) {
+    left: 170px;
+    animation-delay: -1.1s;
+    animation-duration: 1.3s;
+}
+
+.matrix-column:nth-child(19) {
+    left: 180px;
+    animation-delay: -1.9s;
+    animation-duration: 2.1s;
+}
+
+.matrix-column:nth-child(20) {
+    left: 190px;
+    animation-delay: -1.2s;
+    animation-duration: 1.7s;
+}
+
+.matrix-column:nth-child(21) {
+    left: 200px;
+    animation-delay: -0.8s;
+    animation-duration: 1.2s;
+}
+
+.matrix-column:nth-child(22) {
+    left: 210px;
+    animation-delay: -1.7s;
+    animation-duration: 1.9s;
+}
+
+.matrix-column:nth-child(23) {
+    left: 220px;
+    animation-delay: -1.0s;
+    animation-duration: 1.5s;
+}
+
+.matrix-column:nth-child(24) {
+    left: 230px;
+    animation-delay: -2.0s;
+    animation-duration: 2.2s;
+}
+
+.matrix-column:nth-child(25) {
+    left: 240px;
+    animation-delay: -0.8s;
+    animation-duration: 1.1s;
+}
+
+.matrix-column:nth-child(26) {
+    left: 250px;
+    animation-delay: -1.5s;
+    animation-duration: 1.7s;
+}
+
+.matrix-column:nth-child(27) {
+    left: 260px;
+    animation-delay: -1.9s;
+    animation-duration: 2.0s;
+}
+
+.matrix-column:nth-child(28) {
+    left: 270px;
+    animation-delay: -1.2s;
+    animation-duration: 1.4s;
+}
+
+.matrix-column:nth-child(29) {
+    left: 280px;
+    animation-delay: -1.6s;
+    animation-duration: 1.8s;
+}
+
+.matrix-column:nth-child(30) {
+    left: 290px;
+    animation-delay: -1.3s;
+    animation-duration: 1.6s;
+}
+
+.matrix-column:nth-child(31) {
+    left: 300px;
+    animation-delay: -0.9s;
+    animation-duration: 1.3s;
+}
+
+.matrix-column:nth-child(32) {
+    left: 310px;
+    animation-delay: -1.8s;
+    animation-duration: 2.0s;
+}
+
+.matrix-column:nth-child(33) {
+    left: 320px;
+    animation-delay: -1.0s;
+    animation-duration: 1.5s;
+}
+
+.matrix-column:nth-child(34) {
+    left: 330px;
+    animation-delay: -1.7s;
+    animation-duration: 1.8s;
+}
+
+.matrix-column:nth-child(35) {
+    left: 340px;
+    animation-delay: -1.4s;
+    animation-duration: 1.4s;
+}
+
+.matrix-column:nth-child(36) {
+    left: 350px;
+    animation-delay: -1.8s;
+    animation-duration: 2.1s;
+}
+
+.matrix-column:nth-child(37) {
+    left: 360px;
+    animation-delay: -1.1s;
+    animation-duration: 1.6s;
+}
+
+.matrix-column:nth-child(38) {
+    left: 370px;
+    animation-delay: -0.9s;
+    animation-duration: 1.2s;
+}
+
+.matrix-column:nth-child(39) {
+    left: 380px;
+    animation-delay: -1.7s;
+    animation-duration: 1.9s;
+}
+
+.matrix-column:nth-child(40) {
+    left: 390px;
+    animation-delay: -1.3s;
+    animation-duration: 1.7s;
+}
+
+.matrix-column:nth-child(odd)::before {
+    content: "Ñ9#2$8%3&7*4?6!5@1~0+4-8/2\\9<3>7=5!1¿0?6";
+}
+
+.matrix-column:nth-child(even)::before {
+    content: "ZJÑQXK#VBN$MFA%WSE&DRC*FTV?GYB!HUJ~IMK¿OLP";
+}
+
+.matrix-column:nth-child(3n)::before {
+    content: "7K#9P2$M4W%8L1&R5J*3Q0?V6Z!8Y2¿N4B9F1D5T";
+}
+
+.matrix-column:nth-child(4n)::before {
+    content: "0X#1Y2$Z3W%4V5&U6T*7S8?R9Q!8P7¿O6N5M4L3K";
+}
+
+.matrix-column:nth-child(5n)::before {
+    content: "#$%&*+/<=>?@[\\]^_{}~!:;¡¿Ñáéíóú";
+}
+
+.matrix-column:nth-child(7n)::before {
+    content: "9Ñ#m!8x2$p7m%4r5&j3q*0v6?z8y¡2n4¿b9f1d5t";
+}
+
+.matrix-column:nth-child(11n)::before {
+    content: "5T#7H3$L8W%1K9&X2P*7M4?R5J!3Q0¿V6Z8Y2N4B";
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .matrix-column {
+        font-size: 7px;
+        line-height: 8px;
+        width: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .matrix-column {
+        font-size: 6px;
+        line-height: 7px;
+        width: 7px;
+    }
+}
