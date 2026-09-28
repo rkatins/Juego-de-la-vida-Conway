@@ -79,4 +79,4 @@
 > - Al finalizar todas las generaciones o alcanzar el final del juego, la barra se completará.
 > - Al presionar el botón de reiniciar (🔄️ REINICIAR), la barra volverá a su estado inicial de 0%.
 
-31. [ ] Como pequeño detalle, la esquina superior derecha parecera levemente levantada dando el aspecto de la esquina de una pegatina levemente levantada, al hacer hover sobre ella se levantara un poco mas facilitando  el acceso al repo GitHub
+31. [x] Como pequeño detalle, la esquina superior derecha parecera levemente levantada dando el aspecto de la esquina de una pegatina levemente levantada, al hacer hover sobre ella se levantara un poco mas facilitando  el acceso al repo GitHub
