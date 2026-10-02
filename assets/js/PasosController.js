@@ -64,23 +64,16 @@ const btn_play_ajustePasos = document.getElementById('ajustePasos-btn-play')
 const btn_right_ajustePasos = document.getElementById('ajustePasos-btn-right')
 const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left')
 
-// number_ajustePasos.addEventListener('input', () => {
-//     Pasos.fChangeInputNumber()
-// })
-
-// btn_plus_ajustePasos.addEventListener('click', () => {
-//     Pasos.fIncrementarBtnPlus()
-// })
-
-// btn_minus_ajustePasos.addEventListener('click', () => {
-//     Pasos.fDecrementarBtnMinus()
-// })
-
 btn_play_ajustePasos.addEventListener('click', () => {
+    // <use> es el elemento hijo del <svg> que indica qué dibujo/icono concreto se debe renderizar
     const useElem = btn_play_ajustePasos.querySelector('use')
     if (useElem) {
         useElem.setAttribute('href', Pasos.juegoPausado ? "./assets/icons/icons.svg#play" : "./assets/icons/icons.svg#pause")
     }
+
+    // TODO:
+    // 1.Asignar una función diferente a cada botón (play y pause)
+
     Pasos.juegoPausado = !Pasos.juegoPausado
 })
 
