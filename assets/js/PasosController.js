@@ -130,27 +130,12 @@ class PasosController {
     fChangeInputRange() {
         number_ajustePasos.value = range_ajustePasos.value
     }
-
-    fAbrirCerrarPanel() {
-        const panel_ajustePasos = document.querySelector("#ajustePasos-panel")
-        panel_ajustePasos.classList.toggle("activo")
-    }
-
-    fAlternarToolTip() {
-        const tooltip_ajustePasos = document.querySelector("#ajustePasos-tooltip")
-        const panel_ajustePasos = document.querySelector("#ajustePasos-panel")
-
-        tooltip_ajustePasos.style.visibility = panel_ajustePasos.classList.contains("activo") ? "hidden" : ""
-        tooltip_ajustePasos.style.opacity = panel_ajustePasos.classList.contains("activo") ? "0" : ""
-    }
 }
 
 const Pasos = new PasosController()
 
 // --- Event Listeners ---
 // --- Elementos del DOM ---
-const icon_ajustePasos = document.querySelector("#ajustePasos-icon > svg");
-const btn_close_panelAjustePasos = document.querySelector("#ajustePasos-panel > .btn-close");
 const btn_play_ajustePasos = document.getElementById('ajustePasos-btn-play');
 const btn_right_ajustePasos = document.getElementById('ajustePasos-btn-right');
 const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left');
@@ -181,17 +166,4 @@ btn_right_ajustePasos.addEventListener('click', () => {
 // ⏮️ Botón retroceder paso(s)
 btn_left_ajustePasos.addEventListener('click', () => {
     Pasos.fRetrocederPaso();
-});
-
-// 📂 Desplegar panel
-icon_ajustePasos.addEventListener('click', () => {
-    Pasos.fAbrirCerrarPanel();
-    Pasos.fAlternarToolTip();
-});
-
-// ❌ Cerrar panel
-btn_close_panelAjustePasos.addEventListener('click', (e) => {
-    e.stopPropagation();
-    Pasos.fAbrirCerrarPanel();
-    Pasos.fAlternarToolTip();
-});
+});

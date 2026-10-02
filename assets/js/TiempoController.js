@@ -37,26 +37,11 @@ class TiempoController {
     fChangeInputRange() {
         number_ajusteVelocidad.value = range_ajusteVelocidad.value
     }
-
-    fAbrirCerrarPanel() {
-        const panel_ajusteVelocidad = document.querySelector("#ajusteVelocidad-panel")
-        panel_ajusteVelocidad.classList.toggle("activo")
-    }
-
-    fAlternarToolTip() {
-        const tooltip_ajusteVelocidad = document.querySelector("#ajusteVelocidad-tooltip")
-        const panel_ajusteVelocidad = document.querySelector("#ajusteVelocidad-panel")
-
-        tooltip_ajusteVelocidad.style.visibility = panel_ajusteVelocidad.classList.contains("activo") ? "hidden" : ""
-        tooltip_ajusteVelocidad.style.opacity = panel_ajusteVelocidad.classList.contains("activo") ? "0" : ""
-    }
 }
 
 const Tiempo = new TiempoController()
 
 // --- Event Listeners ---
-const icon_ajusteVelocidad = document.querySelector("#ajusteVelocidad-icon > svg")
-const btn_close_panelAjusteVelocidad = document.querySelector("#ajusteVelocidad-panel > .btn-close")
 const range_ajusteVelocidad = document.getElementById('ajusteVelocidad-range')
 const number_ajusteVelocidad = document.getElementById('ajusteVelocidad-number')
 const btn_plus_ajusteVelocidad = document.getElementById('ajusteVelocidad-btn-plus')
@@ -76,15 +61,4 @@ btn_plus_ajusteVelocidad.addEventListener('click', () => {
 
 btn_minus_ajusteVelocidad.addEventListener('click', () => {
     Tiempo.fDecrementarBtnMinus()
-})
-
-icon_ajusteVelocidad.addEventListener('click', () => {
-    Tiempo.fAbrirCerrarPanel()
-    Tiempo.fAlternarToolTip()
-})
-
-btn_close_panelAjusteVelocidad.addEventListener('click', (e) => {
-    e.stopPropagation()
-    Tiempo.fAbrirCerrarPanel()
-    Tiempo.fAlternarToolTip()
-})
+})

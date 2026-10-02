@@ -1,76 +1,85 @@
 class NavBarController {
-    panelAbierto = []
+    panelAbierto = null
 
+    /**
+     * Cierra un panel específico y restaura la visibilidad del tooltip correspondiente.
+     */
+    fCerrarPanel(panel) {
+        if (!panel) return
+        panel.classList.remove('activo')
+        const tooltip = panel.parentElement.querySelector('.tooltip')
+        if (tooltip) {
+            tooltip.style.visibility = ""
+            tooltip.style.opacity = ""
+        }
+        if (this.panelAbierto === panel) {
+            this.panelAbierto = null
+        }
+    }
+
+    /**
+     * Abre un panel específico, oculta su tooltip y cierra cualquier otro panel abierto previamente.
+     */
+    fAbrirPanel(panel) {
+        if (!panel) return
+
+        // Si había otro panel abierto previamente, lo cerramos
+        if (this.panelAbierto && this.panelAbierto !== panel) {
+            this.fCerrarPanel(this.panelAbierto)
+        }
+
+        panel.classList.add('activo')
+        const tooltip = panel.parentElement.querySelector('.tooltip')
+        if (tooltip) {
+            tooltip.style.visibility = "hidden"
+            tooltip.style.opacity = "0"
+        }
+        this.panelAbierto = panel
+    }
+
+    /**
+     * Alterna la apertura/cierre de un panel según el icono pulsado en la barra de navegación.
+     */
     fSwitchPaneles(e) {
-        let elementoPadreId = e.currentTarget.parentNode.id
-        let segmentarPalabras = elementoPadreId.split("-")
-        let panelId = segmentarPalabras[0] + "-panel"
+        const elementoPadreId = e.currentTarget.parentNode.id
+        const segmentarPalabras = elementoPadreId.split("-")
+        const panelId = segmentarPalabras[0] + "-panel"
 
-        let panelPulsado = document.getElementById(panelId)
+        const panelPulsado = document.getElementById(panelId)
 
-        /**
-         * Función auxiliar para cerrar un panel y restaurar su tooltip.
-         * Al cerrar un panel desde aquí, nadie le quitaba los estilos en línea (style="visibility: hidden...") al tooltip anterior,
-         * lo que impedía que el :hover de CSS volviera a mostrarlo. Al limpiar estos estilos en línea, el tooltip vuelve a funcionar con normalidad.
-         */
-        const fCerrarPanel = (panel) => {
-            panel.classList.remove('activo')
-            const tooltip = panel.parentElement.querySelector('.tooltip')
-            if (tooltip) {
-                tooltip.style.visibility = ""
-                tooltip.style.opacity = ""
-            }
-        }
-
-        /**
-         * Si el icono pulsado no tiene un panel asociado (como el botón Reiniciar),
-         * cerramos cualquier panel que estuviera abierto previamente y restauramos su tooltip.
-         */
+        // Si el icono no tiene panel asociado (ej: botón Reiniciar)
         if (!panelPulsado) {
-            this.panelAbierto.forEach(panel => fCerrarPanel(panel))
-            this.panelAbierto = []
+            if (this.panelAbierto) {
+                this.fCerrarPanel(this.panelAbierto)
+            }
             return
         }
 
-        /**
-         * Si el panel pulsado ya está abierto, el usuario lo está cerrando con su propio
-         * método toggle ('fAbrirCerrarPanel'). Vaciamos el registro sin quitar la clase 'activo'
-         * aquí para evitar que el toggle lo vuelva a abrir inmediatamente por colisión.
-         */
+        // Si el panel pulsado ya está abierto, lo cerramos; si no, lo abrimos
         if (panelPulsado.classList.contains('activo')) {
-            this.panelAbierto = []
-            return
+            this.fCerrarPanel(panelPulsado)
+        } else {
+            this.fAbrirPanel(panelPulsado)
         }
-
-        /**
-         * Si se abre un panel nuevo, cerramos cualquier otro panel que estuviera abierto
-         * previamente y restauramos su tooltip para que vuelva a mostrarse en :hover.
-         */
-        this.panelAbierto.forEach(panel => fCerrarPanel(panel))
-        this.panelAbierto = [panelPulsado]
     }
 }
 
 const NavBar = new NavBarController()
 
+// Manejar clics en todos los iconos principales de la barra de navegación
 const iconos = document.querySelectorAll('.icon > svg')
-
 iconos.forEach(icono => {
     icono.addEventListener('click', (e) => {
         NavBar.fSwitchPaneles(e)
     })
 })
 
-/**
- * TODO: Segmentar el id del elemento padre (se llama: %-icon), haciendo uso del caracter separador `-` y luego concatenar el id del panel correspondiente (se llama: %-panel)
-// 1. Tienes el ID del elemento padre
-const iconId = "menu-icon"; 
- 
-// 2. Segmentas por el guion
-const partes = iconId.split("-"); // Devuelve el array: ["menu", "icon"]
-
-// 3. Tomas la primera parte y concatenas el nuevo final
-const panelId = partes[0] + "-panel"; // Resultado: "menu-panel"
-
-console.log(panelId);
- */
+// Manejar clics en todos los botones de cierre (.btn-close) dentro de los paneles
+const botonesCerrar = document.querySelectorAll('.panel-ajustes > .btn-close')
+botonesCerrar.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation()
+        const panel = btn.closest('.panel-ajustes')
+        NavBar.fCerrarPanel(panel)
+    })
+})
