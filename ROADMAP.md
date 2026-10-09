@@ -49,6 +49,8 @@
 > - Botón de Siguiente Generación/Paso (⏭️), solo estara disponible cuando la simulacion este en pausa
 > - Botón de Anterior Generación/Paso Atrás (⏮️), solo estara disponible cuando la simulacion este en pausa
 > - Slider para controlar la velocidad (ms por generación)
+
+22. Por hacer:
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
 23. [ ] Comprimir los iconos del navBar en un solo sprite para optimizar la carga de la web
