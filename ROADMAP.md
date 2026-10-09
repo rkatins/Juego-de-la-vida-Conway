@@ -68,7 +68,7 @@
 
 27. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
 
-28. [ ] Incluir notificacion/mensaje haciendo uso de `iziToast` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
+28. [ ] Incluir notificacion/mensaje haciendo uso de `notyf` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
 
 29. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
 
@@ -80,3 +80,9 @@
 > - Al presionar el botón de reiniciar (🔄️ REINICIAR), la barra volverá a su estado inicial de 0%.
 
 31. [x] Como pequeño detalle, la esquina superior derecha parecera levemente levantada dando el aspecto de la esquina de una pegatina levemente levantada, al hacer hover sobre ella se levantara un poco mas facilitando  el acceso al repo GitHub
+
+32. [ ] Al pulsar sobre el boton de reiniciar mostrar una notificacion/mensaje haciendo uso de `notyf` para informar al usuario que la partida ha sido reiniciada
+
+33. [ ] Si el tamaño de la ventana del navegador ha cambiado mientras se tiene el panel de ajuste del tamaño de la rejilla abierto, y se pulsa sobre el boton `+` se debera mostrar una notificacion/mensaje haciendo uso de `notyf` que indique _ya llegaste al tamaño maximo_
+
+34. [ ] Si el tamaño de la ventana del navegador ha cambiado, el valor/numero mostrado en el panel de ajuste del tamaño de la rejilla para reflejar el nuevo tamaño maximo permitido
