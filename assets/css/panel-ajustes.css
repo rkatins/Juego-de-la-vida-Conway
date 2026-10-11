@@ -11,6 +11,7 @@
     visibility: hidden;
     pointer-events: none;
 
+    color: #FFF;
     /* border: 1px solid #ccc; */
 
     z-index: 10;
