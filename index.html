@@ -34,15 +34,21 @@
     <script src="./assets/js/ReiniciarController.js" defer></script>
     <script src="./assets/js/matrix.js" defer></script>
 
-    <title>Rejilla 128x128</title>
+    <title>Juego de la vida - rkatins</title>
 </head>
 
 <body>
-    <div id="contador-celdas">
-        <div id="contador-panel" class="glass3d panel-ajustes">
-            <span id="contador-celda-viva"></span>
-            <span id="contador-celda-disponible"></span>
-        </div>
+    <div id="contador-celdas" class="glass3d">
+        <!-- <div id="contador-panel" class="glass3d"> -->
+            <div id="contador-contanedor-celda-viva" class="contador-celda-linea">
+                <p>Celdas vivas</p>
+                <span id="contador-celda-viva">0</span>
+            </div>
+            <div id="contador-contanedor-celda-disponible" class="contador-celda-linea">
+                <p>Celdas disponibles</p>
+                <span id="contador-celda-disponible">0</span>
+            </div>
+        <!-- </div> -->
     </div>
 
     <div class="icono-esquina">
