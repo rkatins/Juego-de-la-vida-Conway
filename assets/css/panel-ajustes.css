@@ -11,8 +11,6 @@
     visibility: hidden;
     pointer-events: none;
 
-    border: 1px solid #ccc;
-
     z-index: 10;
     
     transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s;
@@ -22,4 +20,21 @@
     visibility: visible;
     pointer-events: auto;
     transform: translate(-50%, 0);
+}
+
+.btn-close {
+    color: #FFF;
+    fill: currentColor;
+    stroke: currentColor;
+    cursor: pointer;
+}
+
+.btn-close use {
+    transition: all .3s ease;
+}
+
+.btn-close:hover {
+    color: #000;
+    fill: #000;
+    stroke: #000;
 }

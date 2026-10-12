@@ -32,13 +32,25 @@ class LogicaJuegoDeLaVida {
      * Calcula y retorna la menor dimensión de la ventana del navegador en píxeles.
      */
     fGetTamagnoVentana() {
+        let resultado
         const anchoVentana = window.innerWidth
         const altoVentana = window.innerHeight
 
-        const menorMedida = Math.min(anchoVentana, altoVentana)
 
-        console.log(menorMedida + 'px')
-        return menorMedida
+        const maxMedida = Math.max(anchoVentana, altoVentana)
+        const menorMedida = Math.min(anchoVentana, altoVentana)
+// 
+        const hayScrollEnLaPagina = document.documentElement.scrollHeight > document.documentElement.clientHeight;
+
+        if (hayScrollEnLaPagina) {
+            // console.log("La PÁGINA tiene scroll");
+            resultado = maxMedida - 60;
+        } else {
+            // console.log("La PÁGINA NO tiene scroll");
+            resultado = menorMedida - 60;
+        }
+//
+        return resultado
     }
 }
 

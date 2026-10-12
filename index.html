@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./assets/css/glass-effect.css">
     <link rel="stylesheet" href="./assets/css/navBar.css">
     <link rel="stylesheet" href="./assets/css/panel-ajustes.css">
+    <link rel="stylesheet" href="./assets/css/contador-celdas.css">
     <!-- <link rel="stylesheet" href="./assets/css/switch-theme.css"> -->
     <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
 
@@ -31,12 +32,26 @@
     <script src="./assets/js/TiempoController.js" defer></script>
     <script src="./assets/js/PasosController.js" defer></script>
     <script src="./assets/js/ReiniciarController.js" defer></script>
+    <script src="./assets/js/ContadorController.js" defer></script>
     <script src="./assets/js/matrix.js" defer></script>
 
-    <title>Rejilla 128x128</title>
+    <title>Juego de la vida - rkatins</title>
 </head>
 
 <body>
+    <div id="contador-celdas" class="glass3d">
+        <!-- <div id="contador-panel" class="glass3d"> -->
+            <div id="contador-contanedor-celda-viva" class="contador-celda-linea">
+                <p>Celdas vivas</p>
+                <span id="contador-celda-viva">0</span>
+            </div>
+            <div id="contador-contanedor-celda-disponible" class="contador-celda-linea">
+                <p>Celdas disponibles</p>
+                <span id="contador-celda-disponible">0</span>
+            </div>
+        <!-- </div> -->
+    </div>
+
     <div class="icono-esquina">
         <div class="matrix-container"></div>
 
@@ -62,12 +77,12 @@
                         <use href="./assets/icons/icons.svg#x"></use>
                     </svg>
                     <div class="controles-numero">
-                        <svg id="ajusteGrid-btn-plus" class="icon-filter">
-                            <use href="./assets/icons/icons.svg#plus"></use>
-                        </svg>
-                        <input type="text" id="ajusteGrid-number" value="10">
                         <svg id="ajusteGrid-btn-minus" class="icon-filter">
                             <use href="./assets/icons/icons.svg#minus"></use>
+                        </svg>
+                        <input type="text" id="ajusteGrid-number" value="10">
+                        <svg id="ajusteGrid-btn-plus" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#plus"></use>
                         </svg>
                     </div>
 

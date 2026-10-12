@@ -43,14 +43,12 @@
 
 21. [x] Implementar nuevo diseño en `index.css`
 
-22. [WIP] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
+22. [x] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️), solo estara disponible cuando la simulacion este en pausa
 > - Botón de Anterior Generación/Paso Atrás (⏮️), solo estara disponible cuando la simulacion este en pausa
 > - Slider para controlar la velocidad (ms por generación)
-
-22. Por hacer:
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
 23. [x] Comprimir los iconos del navBar en un solo sprite para optimizar la carga de la web
@@ -60,15 +58,10 @@
 > </svg>
 >```
 
-23. [ ] Crear un contenedor para los controles o extender el ya existente para el tamaño de la rejilla y adaptarlo al nuevo bloque.
-
 24. [WIP] Implementar control de velocidad (slider de rango)
 
-25. [ ] Implementar contador de celdas vacias y marcadas (solo se mostrara este al pulsar sobre el boton de reinicar)
+26. [ ] Hacer el `CSS` responsive para la web
 
-26. [ ] Hacer el css responsive para la web
-
-27. [ ] Incluir cuadro de texto que informe sobre las dimensiones maximas de la rejilla y una breve explicacion de como funciona el juego
 27. bis [ ] Que el cuadro de texto pase a ser un chatBot con el que pueda interactuar el usuario con lenguaje natural para que este pueda resolver su duda y guiarlo en la partida. 
 
 28. [ ] Incluir notificacion/mensaje haciendo uso de `notyf` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc

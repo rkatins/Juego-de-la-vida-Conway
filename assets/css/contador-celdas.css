@@ -1,0 +1,35 @@
+#contador-celdas {
+    position: absolute;
+
+    top: 5px;
+    left: 5px;
+
+    padding: 5px;
+
+    width: fit-content;
+    height: fit-content;
+
+    color: #FFF;
+
+    border-radius: 10px;
+}
+
+.contador-celda-linea {
+
+
+    display: grid;
+    /*
+     * ch -> ancho de un caracter
+     * ch -> es variable respecto al tamaño de letra definida en el contenedor
+     */
+    grid-template-columns: 1fr 5ch;
+    gap: 20px;
+
+    align-items: center;
+
+    font-size: 10px;
+}
+
+.contador-celda-linea > p {
+    white-space: nowrap;
+}
