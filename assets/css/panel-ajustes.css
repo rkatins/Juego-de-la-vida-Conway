@@ -21,3 +21,20 @@
     pointer-events: auto;
     transform: translate(-50%, 0);
 }
+
+.btn-close {
+    color: #FFF;
+    fill: currentColor;
+    stroke: currentColor;
+    cursor: pointer;
+}
+
+.btn-close use {
+    transition: all .3s ease;
+}
+
+.btn-close:hover {
+    color: #000;
+    fill: #000;
+    stroke: #000;
+}
