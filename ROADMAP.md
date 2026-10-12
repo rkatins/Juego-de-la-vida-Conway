@@ -50,7 +50,7 @@
 > - Botón de Anterior Generación/Paso Atrás (⏮️), solo estara disponible cuando la simulacion este en pausa
 > - Slider para controlar la velocidad (ms por generación)
 
-22. En progreso:
+22. [50%] En progreso:
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
 23. [x] Comprimir los iconos del navBar en un solo sprite para optimizar la carga de la web
@@ -62,7 +62,7 @@
 
 24. [WIP] Implementar control de velocidad (slider de rango)
 
-26. [ ] Hacer el css responsive para la web
+26. [ ] Hacer el `CSS` responsive para la web
 
 27. bis [ ] Que el cuadro de texto pase a ser un chatBot con el que pueda interactuar el usuario con lenguaje natural para que este pueda resolver su duda y guiarlo en la partida. 
 
