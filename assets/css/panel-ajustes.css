@@ -11,9 +11,6 @@
     visibility: hidden;
     pointer-events: none;
 
-    color: #FFF;
-    /* border: 1px solid #ccc; */
-
     z-index: 10;
     
     transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s;
