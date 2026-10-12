@@ -43,14 +43,12 @@
 
 21. [x] Implementar nuevo diseño en `index.css`
 
-22. [WIP] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
+22. [x] Añadir controles de simulación en index.html (Play/Pause, Step, Velocidad, Contador)
 > Crear un contenedor `#controlesSimulacion` en `index.html` con los siguientes controles:
 > - Botón de Iniciar/Pausar (▶️ / ⏸️) (Una vez pulsado el boton de play no se podra modificar el tamaño de la rejilla ni pulsar/seleccionar ninguna casilla hasta que se pulse el boton de reiniciar)
 > - Botón de Siguiente Generación/Paso (⏭️), solo estara disponible cuando la simulacion este en pausa
 > - Botón de Anterior Generación/Paso Atrás (⏮️), solo estara disponible cuando la simulacion este en pausa
 > - Slider para controlar la velocidad (ms por generación)
-
-22. [50%] En progreso:
 > - Indicador/Contador de celdas seleccionadas/vivas.
 
 23. [x] Comprimir los iconos del navBar en un solo sprite para optimizar la carga de la web
