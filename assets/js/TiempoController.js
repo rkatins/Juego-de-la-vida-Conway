@@ -1,4 +1,4 @@
-class TiempoController {
+class VelocidadController {
     /**
      * Sincroniza el valor de velocidad.
      */
@@ -52,7 +52,7 @@ class TiempoController {
     }
 }
 
-const Tiempo = new TiempoController()
+const Velocidad = new VelocidadController()
 
 // --- Event Listeners ---
 const icon_ajusteVelocidad = document.querySelector("#ajusteVelocidad-icon > svg")
@@ -63,28 +63,28 @@ const btn_plus_ajusteVelocidad = document.getElementById('ajusteVelocidad-btn-pl
 const btn_minus_ajusteVelocidad = document.getElementById('ajusteVelocidad-btn-minus')
 
 range_ajusteVelocidad.addEventListener('input', () => {
-    Tiempo.fAjustarVelocidad(range_ajusteVelocidad, number_ajusteVelocidad)
+    Velocidad.fAjustarVelocidad(range_ajusteVelocidad, number_ajusteVelocidad)
 })
 
 number_ajusteVelocidad.addEventListener('input', () => {
-    Tiempo.fChangeInputNumber()
+    Velocidad.fChangeInputNumber()
 })
 
 btn_plus_ajusteVelocidad.addEventListener('click', () => {
-    Tiempo.fIncrementarBtnPlus()
+    Velocidad.fIncrementarBtnPlus()
 })
 
 btn_minus_ajusteVelocidad.addEventListener('click', () => {
-    Tiempo.fDecrementarBtnMinus()
+    Velocidad.fDecrementarBtnMinus()
 })
 
 icon_ajusteVelocidad.addEventListener('click', () => {
-    Tiempo.fAbrirCerrarPanel()
-    Tiempo.fAlternarToolTip()
+    Velocidad.fAbrirCerrarPanel()
+    Velocidad.fAlternarToolTip()
 })
 
 btn_close_panelAjusteVelocidad.addEventListener('click', (e) => {
     e.stopPropagation()
-    Tiempo.fAbrirCerrarPanel()
-    Tiempo.fAlternarToolTip()
+    Velocidad.fAbrirCerrarPanel()
+    Velocidad.fAlternarToolTip()
 })
