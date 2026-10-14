@@ -58,7 +58,7 @@
 > </svg>
 >```
 
-24. [WIP] Implementar control de velocidad (slider de rango)
+24. [x] Implementar control de velocidad (slider de rango)
 
 26. [ ] Hacer el `CSS` responsive para la web
 
@@ -82,3 +82,9 @@
 33. [ ] Si el tamaño de la ventana del navegador ha cambiado mientras se tiene el panel de ajuste del tamaño de la rejilla abierto, y se pulsa sobre el boton `+` se debera mostrar una notificacion/mensaje haciendo uso de `notyf` que indique _ya llegaste al tamaño maximo_
 
 34. [ ] Si el tamaño de la ventana del navegador ha cambiado, el valor/numero mostrado en el panel de ajuste del tamaño de la rejilla para reflejar el nuevo tamaño maximo permitido
+
+35. [ ] Ejecutar `git mv [nombre_antiguo.ext] [nombre_nuevo.ext]` para cambiar el nombre de `PasosController.js` a `ReproductorController.js`
+
+36. [ ] Boton que iniciara la simulación, una vez que se pulse el boton desaparecera o se deshabilitara. Mientras que este boton sea visible la opcion de pausar simulacion que se encontrará en el panel de reproducción debe estar deshabilitado.
+
+37. [ ] Implementar funciones del panel de reproducion.

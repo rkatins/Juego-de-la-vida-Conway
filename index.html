@@ -29,7 +29,7 @@
     <script src="./assets/js/LogicaJuegoDeLaVida.js" defer></script>
     <script src="./assets/js/RejillaController.js" defer></script>
     <script src="./assets/js/AjusteGridController.js" defer></script>
-    <script src="./assets/js/TiempoController.js" defer></script>
+    <script src="./assets/js/VelocidadController.js" defer></script>
     <script src="./assets/js/PasosController.js" defer></script>
     <script src="./assets/js/ReiniciarController.js" defer></script>
     <script src="./assets/js/ContadorController.js" defer></script>
@@ -103,17 +103,20 @@
                         <use href="./assets/icons/icons.svg#x"></use>
                     </svg>
                     <div class="controles-numero">
-                        <svg id="ajusteVelocidad-btn-plus" class="icon-filter">
-                            <use href="./assets/icons/icons.svg#plus"></use>
-                        </svg>
-                        <input type="text" id="ajusteVelocidad-number" value="500">
                         <svg id="ajusteVelocidad-btn-minus" class="icon-filter">
                             <use href="./assets/icons/icons.svg#minus"></use>
                         </svg>
+                        <input type="text" id="ajusteVelocidad-number" value="500">
+                        <svg id="ajusteVelocidad-btn-plus" class="icon-filter">
+                            <use href="./assets/icons/icons.svg#plus"></use>
+                        </svg>
                     </div>
 
-                    <input type="range" id="ajusteVelocidad-range" name="ajusteVelocidad-range" min="100" max="2000"
-                        value="500">
+                    <input type="range" id="ajusteVelocidad-range" name="ajusteVelocidad-range"
+                        min="100"
+                        max="2000"
+                        step="100"
+                        value="100">
                 </div>
             </div>
 

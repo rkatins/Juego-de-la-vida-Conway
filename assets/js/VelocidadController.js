@@ -1,4 +1,31 @@
 class VelocidadController {
+    fAplicarNuevaVelocidad() {
+        /*
+         * `clearInterval()` y `setInterval()` serian como el panel para indicar la velocidad 
+         * propio/interno, no visible para el jugador
+         */
+        
+        if (juegoEnEjecucion) {
+            clearInterval(velocidadInterna)
+
+            let velocidad = parseInt(number_ajusteVelocidad.value) || 100
+
+            /*
+             * Vuelves a lanzar la función que calcula la siguiente generación en caso 
+             * de que se modifique la velocidad si se tmodifica esta desde el panel 
+             * mientras el juego esta en ejecución
+             * 
+             * Reproductor = PasosController.js -> Tarea 37
+             * En caso de poner `()`, la función se ejecutaría inmediatamente segun se lee.
+             * 
+             * Muy entre comillas -> setInterval <- seria com un ejecutador/temporizador
+             * para ejecutar la funcion `Reproductor.fWIP`, la variable `velocidad` seria
+             * el periodo/intervalo de cada cuanto ejecuta dicha funcion indicada antes
+             */
+            velocidadInterna = setInterval(Reproductor.fWIP, velocidad);
+        }
+    }
+
     /**
      * Sincroniza el valor de velocidad.
      */
