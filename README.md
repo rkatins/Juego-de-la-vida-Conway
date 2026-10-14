@@ -9,25 +9,39 @@ Una implementación web interactiva y responsiva del famoso autómata celular **
 
 ## 🌟 Características Destacadas
 
-*   **Rejilla Responsiva y Dinámica:** El tamaño máximo físico del tablero se ajusta en tiempo real según el tamaño del navegador. Compara la altura y la anchura, selecciona la menor de ellas y reserva un margen de seguridad de $40\text{ px}$ para garantizar que la rejilla nunca sobresalga de la pantalla.
-*   **Conservación del Estado:** Al cambiar el tamaño de la rejilla de forma interactiva, las coordenadas de las celdas previamente marcadas (vivas) se guardan y se vuelven a dibujar en su posición original si entran dentro del nuevo rango.
-*   **Límite de Selección Inteligente:** Permite marcar manualmente celdas como vivas hasta un límite máximo del **50% del total de las celdas** de la cuadrícula.
-*   **Controles Sincronizados:** Ajuste dinámico del tamaño de la cuadrícula mediante múltiples controles vinculados (botones de incremento/decremento `+/-`, deslizador/slider e input numérico directo con validación).
-*   **Estructura Modular CSS:** Estilos divididos de manera atómica (fondos, botones, rejilla, controles) para una mayor mantenibilidad.
+*   **Arquitectura y Diseño Moderno:** Desarrollado utilizando el patrón Controller con clases modulares en ES6+. La interfaz presenta un diseño Glassmorphism 3D, tipografía Space Grotesk de Google Fonts y utiliza un Sprite SVG para la optimización de iconos.
+*   **Rejilla Responsiva y Dinámica:** El contenedor principal ajusta dinámicamente el tamaño máximo físico del tablero calculando la dimensión mínima entre el ancho y alto de la ventana, aplicando un margen de seguridad para evitar desbordamientos.
+*   **Conservación del Estado:** Al cambiar el tamaño de la rejilla de forma interactiva, las coordenadas 2D de las celdas vivas se guardan y se restauran aquellas que quepan en las nuevas dimensiones.
+*   **Límite de Selección y Contadores:** Permite marcar manualmente celdas como vivas hasta un límite del 50% del total de las celdas. Un panel flotante superior muestra en tiempo real el balance exacto de celdas vivas y celdas disponibles.
+*   **Barra de Herramientas Modular (NavBar):** Menú de navegación inferior con paneles emergentes independientes para:
+    *   **Ajuste de Rejilla:** Controles sincronizados (botones `+/-`, deslizador e input) para modificar el tamaño de la cuadrícula.
+    *   **Ajuste de Velocidad:** Regulación del intervalo de tiempo entre generaciones automáticas (desde 100 ms hasta 2000 ms).
+    *   **Control de Pasos:** Botonera multimedia para avance manual paso a paso o reproducción/pausa continua de la simulación.
+    *   **Reiniciar:** Limpia y resetea el estado completo de la matriz y la interfaz.
+*   **Efectos Visuales Extra:** Incorpora un efecto de esquina levantada (ribbon) en la parte superior derecha con una animación de lluvia digital estilo Matrix, que enlaza al perfil de GitHub del autor.
 
 ---
 
 ## 📁 Estructura del Código Fuente
 
-*   [index.html](./index.html): Estructura semántica base de la aplicación.
-*   [LogicaJuegoDeLaVida.js](./assets/js/LogicaJuegoDeLaVida.js): Clase que gestiona el estado de la matriz, las reglas del juego, la interacción al hacer clic en las celdas y el cálculo del tamaño de ventana.
-*   [AjustesGrid.js](./assets/js/AjustesGrid.js): Clase y lógica de sincronización bidireccional entre los inputs del usuario para reajustar el tablero.
-*   [script.js](./assets/js/script.js): Inicialización del DOM, gestión de redibujados y control de eventos de redimensionamiento de pantalla (`resize`).
+El proyecto ha sido refactorizado para separar responsabilidades de manera estricta:
+
+*   **HTML:** `index.html` actúa como punto de entrada semántico.
+*   **Controladores JS (`./assets/js/`):** 
+    *   `NavBarController.js`: Gestiona la interacción del menú y la apertura exclusiva de paneles.
+    *   `LogicaJuegoDeLaVida.js`: Implementa la lógica central, reglas matemáticas y cálculo geométrico.
+    *   `RejillaController.js`: Encargado de la creación y limitación física en píxeles del DOM.
+    *   `AjusteGridController.js`, `VelocidadController.js`, `PasosController.js`, `ReiniciarController.js`: Controladores específicos para cada herramienta y configuración.
+    *   `ContadorController.js`: Calcula los balances de celdas en pantalla.
+    *   `matrix.js`: Genera el efecto visual estético de la esquina superior.
+*   **Estilos Modulares CSS (`./assets/css/`):** La hoja de estilos principal se divide atómicamente en múltiples archivos (como `root.css`, `glass-effect.css`, `navBar.css`, `casilla.css`, etc.) para facilitar la mantenibilidad y aplicar propiedades personalizadas de manera eficiente.
 
 ---
 
 ## 🛠️ Cómo Ejecutar el Proyecto
 
+*   **Online:** Juega directamente desde [GitHub Pages](https://rkatins.github.io/Juego-de-la-vida-Conway/).
+*   **Local:**
 1. Clona el repositorio en tu máquina local o alójalo en un servidor local (por ejemplo, en la carpeta `htdocs` de XAMPP).
 2. Abre el archivo [index.html](./index.html) en tu navegador web favorito.
 3. ¡Comienza a pintar celdas y a configurar el tablero!
