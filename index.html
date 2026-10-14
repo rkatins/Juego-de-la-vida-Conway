@@ -168,7 +168,14 @@
         </label> -->
     </div>
 
-    <button id="btn-start-game">COMENZAR JUEGO</button>
+    <button id="btn-start-game" class="btn glass3d">
+        <!-- /* 
+         * La regla `.glass3d > * { position: relative; z-index: 6; }` solo afecta a
+         * elementos hijos directos, pero no al texto dentro de las etiquetas.
+         * Los pseudoelementos pueden tapar el contenido, mejor envolver el texto en una etiqueta hija
+        */ -->
+        <span>COMENZAR JUEGO</span>
+    </button>
 </body>
 
 </html>
