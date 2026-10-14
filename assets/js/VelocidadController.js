@@ -1,4 +1,24 @@
 class VelocidadController {
+    fAplicarNuevaVelocidad() {
+        /*
+         * `clearInterval()` y `setInterval()` serian como el panel para indicar la velocidad 
+         * propio/interno, no visible para el jugador
+         */
+        
+        if (juegoEnEjecucion) {
+            clearInterval(velocidadInterna)
+
+            let velocidad = parseInt(number_ajusteVelocidad.value) || 100
+
+            /*
+             * Vuelves a lanzar la función que calcula la siguiente generación en caso 
+             * de que se modifique la velocidad si se tmodifica esta desde el panel 
+             * mientras el juego esta en ejecución
+             */
+            velocidadInterna = setInterval(ejecutarSigGeneracion, velocidad);
+        }
+    }
+
     /**
      * Sincroniza el valor de velocidad.
      */
