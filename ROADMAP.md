@@ -58,7 +58,7 @@
 > </svg>
 >```
 
-24. [WIP] Implementar control de velocidad (slider de rango)
+24. [x] Implementar control de velocidad (slider de rango)
 
 26. [ ] Hacer el `CSS` responsive para la web
 
