@@ -14,8 +14,15 @@ class VelocidadController {
              * Vuelves a lanzar la función que calcula la siguiente generación en caso 
              * de que se modifique la velocidad si se tmodifica esta desde el panel 
              * mientras el juego esta en ejecución
+             * 
+             * Reproductor = PasosController.js -> Tarea 37
+             * En caso de poner `()`, la función se ejecutaría inmediatamente segun se lee.
+             * 
+             * Muy entre comillas -> setInterval <- seria com un ejecutador/temporizador
+             * para ejecutar la funcion `Reproductor.fWIP`, la variable `velocidad` seria
+             * el periodo/intervalo de cada cuanto ejecuta dicha funcion indicada antes
              */
-            velocidadInterna = setInterval(ejecutarSigGeneracion, velocidad);
+            velocidadInterna = setInterval(Reproductor.fWIP, velocidad);
         }
     }
 
