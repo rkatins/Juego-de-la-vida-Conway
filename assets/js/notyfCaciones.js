@@ -9,14 +9,6 @@ notyf.success({
     background: '#93f'
 });
 
-// 1. Creas la instancia UNA SOLA VEZ
-const notyf = new Notyf({
-  duration: 4000,
-  position: { x: 'right', y: 'bottom' }
-});
-
-// 2. Usas la misma variable 'notyf' en cualquier lugar
-
 // Notificación de éxito estándar
 document.getElementById('btn-exito').addEventListener('click', () => {
   notyf.success('¡Operación realizada con éxito!');
