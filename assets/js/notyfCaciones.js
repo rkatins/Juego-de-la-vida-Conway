@@ -1,31 +1,25 @@
-// Create an instance of Notyf
-var notyf = new Notyf();
+var notificacion_prueba = new Notyf()
 
-// Display a success notification
-notyf.success({
+const btn_start_game = document.querySelector('#btn-start-game')
+
+btn_start_game.addEventListener('click', () => {
+  /*
+  * `open()` no necesita que se le indique la propiedad `type`
+  */
+  notificacion_prueba.open({
+    /*
+    * Todo el bloque position se puede indicar como objeto al crear 
+    * la instancia con `new Notyf()`, asi no hay que definirlo en cada
+    * notificación 
+    */
+    position: {
+      x: 'right',
+      y: 'bottom',
+    },
     message: 'Hola caracola',
-    duration: 0,
-    icon: false,
-    background: '#93f'
-});
-
-// Notificación de éxito estándar
-document.getElementById('btn-exito').addEventListener('click', () => {
-  notyf.success('¡Operación realizada con éxito!');
-});
-
-// Notificación de error
-document.getElementById('btn-error').addEventListener('click', () => {
-  notyf.error('Ha ocurrido un error al guardar los datos.');
-});
-
-// Notificación con configuración específica sobrescrita
-document.getElementById('btn-custom').addEventListener('click', () => {
-  notyf.open({
-    type: 'info',
-    message: 'Esta tiene un color e icono a medida',
-    background: '#09f',
-    icon: false,
-    duration: 6000
-  });
-});
+    duration: 10000,
+    dismissible: true,
+    background: '#93f',
+    className: 'notyf-text-center',
+  })
+})
