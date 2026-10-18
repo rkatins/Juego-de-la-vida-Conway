@@ -1,5 +1,21 @@
-.notyf-text-center {
-    display: flex;
+.notyf-text-center .notyf__wrapper {
+    width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.notyf-text-color {
+    color: var(--linen);
+}
+
+.notyf-info {
+    background: var(--notyf-blue-green);
+}
+
+.notyf-succes {
+    background: var(--notyf-soft-aquamarine);
+}
+
+.notyf-eror {
+    background: var(--notyf-soft-colral);
 }
