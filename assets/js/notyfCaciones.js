@@ -11,21 +11,21 @@ btn_reiniciar.addEventListener('click', () => {
   })
 })
 
-notyfCacion.open({
-  message: 'prueba de color',
-  duration: 0,
-  background: 'var(--notyf-soft-aquamarine)',
-  dismissible: true,
-  className: 'notyf-text-color notyf-succes'
-})
+// notyfCacion.open({
+//   message: 'prueba de color',
+//   duration: 0,
+//   background: 'var(--notyf-soft-aquamarine)',
+//   dismissible: true,
+//   className: 'notyf-text-color notyf-succes'
+// })
 
-notyfCacion.open({
-  message: 'prueba de color',
-  duration: 0,
-  background: 'var(--notyf-soft-colral)',
-  dismissible: true,
-  className: 'notyf-text-color notyf-error'
-})
+// notyfCacion.open({
+//   message: 'prueba de color',
+//   duration: 0,
+//   background: 'var(--notyf-soft-colral)',
+//   dismissible: true,
+//   className: 'notyf-text-color notyf-error'
+// })
 
 // --- PRUEBA
 function fPruebaNotyf() {
