@@ -1,15 +1,43 @@
 class PasosController {
-    // Varisblr booleano para saber el estado del juego
+    // Varisble booleana para saber el estado del juego
     juegoPausado = false;
 
-    /**
+    /*
+     * Actualiza el icono según el estado de juegoPausado:
+     * true  -> #pause
+     * false -> #play
+     */
+    fActualizarIcono() {
+        const useElem = btn_play_ajustePasos.querySelector('use')
+
+        if (!useElem) return
+
+        useElem.setAttribute('href', this.juegoPausado ?
+            "./assets/icons/icons.svg#pause" :
+            "./assets/icons/icons.svg#play"
+        )
+    }
+
+    /*
+    * Alterna el estado de pausa y actualiza la vista
+    * No se pone dentro de `fActualizarIcono()` por que seria un poco
+    * como algo que se retroalimenta a si mis continuamente. Uno
+    * enciende por que lo ve apagado y el otro apaga por que lo ve encendido.
+    */
+    fTogglePausa() {
+        this.juegoPausado = !this.juegoPausado;
+
+        this.fActualizarIcono();
+    }
+
+    /*
      * Sincroniza el valor de pasos.
      */
     fAjustarPasos(dar, recibir) {
         recibir.value = dar.value
     }
 
-    /**
+    /*
      * Incrementa la cantidad de pasos.
      */
     fIncrementarBtnPlus() {
@@ -21,7 +49,7 @@ class PasosController {
         }
     }
 
-    /**
+    /*
      * Decrementa la cantidad de pasos.
      */
     fDecrementarBtnMinus() {
@@ -64,24 +92,8 @@ const btn_play_ajustePasos = document.getElementById('ajustePasos-btn-play')
 const btn_right_ajustePasos = document.getElementById('ajustePasos-btn-right')
 const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left')
 
-// number_ajustePasos.addEventListener('input', () => {
-//     Pasos.fChangeInputNumber()
-// })
-
-// btn_plus_ajustePasos.addEventListener('click', () => {
-//     Pasos.fIncrementarBtnPlus()
-// })
-
-// btn_minus_ajustePasos.addEventListener('click', () => {
-//     Pasos.fDecrementarBtnMinus()
-// })
-
 btn_play_ajustePasos.addEventListener('click', () => {
-    const useElem = btn_play_ajustePasos.querySelector('use')
-    if (useElem) {
-        useElem.setAttribute('href', Pasos.juegoPausado ? "./assets/icons/icons.svg#play" : "./assets/icons/icons.svg#pause")
-    }
-    Pasos.juegoPausado = !Pasos.juegoPausado
+    Pasos.fTogglePausa()
 })
 
 icon_ajustePasos.addEventListener('click', () => {
