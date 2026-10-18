@@ -64,7 +64,7 @@
 
 27. bis [ ] Que el cuadro de texto pase a ser un chatBot con el que pueda interactuar el usuario con lenguaje natural para que este pueda resolver su duda y guiarlo en la partida. 
 
-28. [ ] Incluir notificacion/mensaje haciendo uso de `notyf` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
+28. [x] Incluir notificacion/mensaje haciendo uso de `notyf` para informar al usuario sobre cosas como la maxima dimension ha sido alcanzada o que la partida ha finalizado etc
 
 29. [ ] Una vez que se finalice el juego/generaciones se pausara la simulacion, y para volver a iniciarla se debera pulsar el boton de reinicar y el boton de pausa pasara a ser un boton de prohibido hasta que se pulse el boton de reinicar
 
