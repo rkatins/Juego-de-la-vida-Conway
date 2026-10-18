@@ -87,4 +87,6 @@
 
 36. [ ] Boton que iniciara la simulación, una vez que se pulse el boton desaparecera o se deshabilitara. Mientras que este boton sea visible la opcion de pausar simulacion que se encontrará en el panel de reproducción debe estar deshabilitado.
 
-37. [ ] Implementar funciones del panel de reproducion.
+37. [ ] Implementar funciones del panel de reprodución.
+
+38. [ ] Hacer que el boton `play` del panel de reprodución este deshabilitado si todavia no se ha pulsado el `btn-start-game` para iniciar la partida/simulación.
