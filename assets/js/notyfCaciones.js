@@ -4,7 +4,7 @@ const btn_reiniciar = document.querySelector('#ajusteReiniciar-icon')
 
 btn_reiniciar.addEventListener('click', () => {
   notyfCacion.open({
-    message: 'prueba de color',
+    message: 'Juego reiniciado',
     duration: 2000,
     dismissible: false,
     className: 'notyf-text-color notyf-text-center notyf-info'

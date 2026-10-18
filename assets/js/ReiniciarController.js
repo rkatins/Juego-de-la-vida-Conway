@@ -14,8 +14,8 @@ class ReiniciarController {
             celda.classList.remove('marcada')
         })
 
-        // A lo mejor esta si vuelve
-        // Pasos.juegoPausado = true
+        Pasos.juegoPausado = false
+        Pasos.fActualizarIcono()
 
         /**
          * Se seleccionan todos los paneles directamente desde el DOM (.panel-ajustes)
