@@ -1,17 +1,14 @@
 var notyfCacion = new Notyf()
 
-const btn_start_game = document.querySelector('#btn-start-game')
+const btn_reiniciar = document.querySelector('#ajusteReiniciar-icon')
 
-btn_start_game.addEventListener('click', () => {
-
-})
-
-notyfCacion.open({
-  message: 'prueba de color',
-  duration: 0,
-  background: 'var(--notyf-blue-green)',
-  dismissible: false,
-  className: 'notyf-text-color notyf-text-center notyf-info'
+btn_reiniciar.addEventListener('click', () => {
+  notyfCacion.open({
+    message: 'prueba de color',
+    duration: 2000,
+    dismissible: false,
+    className: 'notyf-text-color notyf-text-center notyf-info'
+  })
 })
 
 notyfCacion.open({
@@ -31,6 +28,7 @@ notyfCacion.open({
 })
 
 // --- PRUEBA
+function fPruebaNotyf() {
   /*
   * `open()` no necesita que se le indique la propiedad `type`
   */
@@ -54,3 +52,4 @@ notyfCacion.open({
     */
     className: 'notyf-text-center',
   })
+}
