@@ -14,6 +14,9 @@ class ReiniciarController {
             celda.classList.remove('marcada')
         })
 
+        // A lo mejor esta si vuelve
+        // Pasos.juegoPausado = true
+
         /**
          * Se seleccionan todos los paneles directamente desde el DOM (.panel-ajustes)
          * para garantizar su cierre sin depender del estado del array `NavBar.panelAbierto`,
