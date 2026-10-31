@@ -1,20 +1,20 @@
-class PasosController {
-    // Varisble booleana para saber el estado del juego
-    juegoPausado = false;
+// Varisble booleana para saber el estado del juego
+let juegoPausado = true;
 
+class PasosController {
     /*
      * Actualiza el icono según el estado de juegoPausado:
      * true  -> #pause
      * false -> #play
      */
     fActualizarIcono() {
-        const useElem = btn_play_ajustePasos.querySelector('use')
+        let useElem = btn_play_ajustePasos.querySelector('use')
 
         if (!useElem) return
 
         useElem.setAttribute('href', this.juegoPausado ?
-            "./assets/icons/icons.svg#pause" :
-            "./assets/icons/icons.svg#play"
+            "./assets/icons/icons.svg#play" :
+            "./assets/icons/icons.svg#pause"
         )
     }
 
@@ -91,6 +91,18 @@ const btn_close_panelAjustePasos = document.querySelector("#ajustePasos-panel > 
 const btn_play_ajustePasos = document.getElementById('ajustePasos-btn-play')
 const btn_right_ajustePasos = document.getElementById('ajustePasos-btn-right')
 const btn_left_ajustePasos = document.getElementById('ajustePasos-btn-left')
+const btn_start_game = document.getElementById('btn-start-game')
+
+document.addEventListener('DOMContentLoaded', () => {
+    let useElem = btn_play_ajustePasos.querySelector('use')
+
+    if (juegoPausado) {
+        juegoPausado = true
+        btn_start_game.classList.remove('hide-tag')
+        useElem.setAttribute('href', "./assets/icons/icons.svg#play")
+        icon_ajustePasos.classList.add('disable-btn')
+    }
+})
 
 btn_play_ajustePasos.addEventListener('click', () => {
     Pasos.fTogglePausa()
@@ -105,4 +117,13 @@ btn_close_panelAjustePasos.addEventListener('click', (e) => {
     e.stopPropagation()
     Pasos.fAbrirCerrarPanel()
     Pasos.fAlternarToolTip()
+})
+
+btn_start_game.addEventListener('click', () => {
+    let useElem = btn_play_ajustePasos.querySelector('use')
+
+    juegoPausado = false
+    btn_start_game.classList.add('hide-tag')
+    useElem.setAttribute('href', "./assets/icons/icons.svg#pause")
+    icon_ajustePasos.classList.remove('disable-btn')
 })
