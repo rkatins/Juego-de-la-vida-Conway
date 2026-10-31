@@ -14,8 +14,13 @@ class ReiniciarController {
             celda.classList.remove('marcada')
         })
 
-        Pasos.juegoPausado = false
-        Pasos.fActualizarIcono()
+        let useElem = btn_play_ajustePasos.querySelector('use')
+
+        Pasos.juegoPausado = true
+        btn_start_game.classList.remove('hide-tag')
+
+        icon_ajustePasos.classList.add('disable-btn')
+        useElem.setAttribute('href', "./assets/icons/icons.svg#play")
 
         /**
          * Se seleccionan todos los paneles directamente desde el DOM (.panel-ajustes)

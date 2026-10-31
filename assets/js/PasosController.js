@@ -157,7 +157,7 @@ btn_close_panelAjustePasos.addEventListener('click', (e) => {
 btn_start_game.addEventListener('click', () => {
     let useElem = btn_play_ajustePasos.querySelector('use')
 
-    juegoPausado = false
+    Pasos.juegoPausado = false
 
     // Añade la clase para ocultar el boton que permite iniciar la partida
     btn_start_game.classList.add('hide-tag')
