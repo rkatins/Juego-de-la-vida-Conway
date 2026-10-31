@@ -91,4 +91,6 @@
 
 38. [x] Hacer que el boton `play` del panel de reprodución este deshabilitado si todavia no se ha pulsado el `btn-start-game` para iniciar la partida/simulación.
 
-39 [ ]: Restaurar el estado inicial al pulsar el botón de reiniciar (ReiniciarController): volver a mostrar btn-start-game y deshabilitar de nuevo el botón de reproducción con la clase disable-btn.
+39. [x] Restaurar el estado inicial al pulsar el botón de reiniciar (ReiniciarController): volver a mostrar btn-start-game y deshabilitar de nuevo el botón de reproducción con la clase disable-btn.
+
+40. [ ] Suavizar la transición y reubicación de la rejilla al desaparecer/aparecer `btn-start-game`.
