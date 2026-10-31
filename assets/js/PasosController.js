@@ -1,7 +1,7 @@
-// Variable booleana para saber el estado del juego
-let juegoPausado = true;
-
 class PasosController {
+    // Variable booleana para saber el estado del juego
+    juegoPausado = true
+    
     /*
      * Actualiza el icono según el estado de juegoPausado:
      * true  -> #pause
