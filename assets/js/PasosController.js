@@ -113,8 +113,8 @@ const btn_start_game = document.getElementById('btn-start-game')
 document.addEventListener('DOMContentLoaded', () => {
     let useElem = btn_play_ajustePasos.querySelector('use')
 
-    if (juegoPausado) {
-        juegoPausado = true
+    if (Pasos.juegoPausado) {
+        Pasos.juegoPausado = true
 
         // Si tiene la clase `hide-tag` se la quita para que sea visible
         btn_start_game.classList.remove('hide-tag')
