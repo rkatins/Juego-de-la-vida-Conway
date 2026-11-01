@@ -101,3 +101,6 @@
 42. [ ] Revisión y puesta a cero de los valores del `contador` de generaciones/pasos al pulsar el botón de reiniciar.
 
 43. [-] Aplicar la clase `disable-btn` a los controles multimedia del panel de pasos.
+
+44. [ ] Deshabilitar `btn-start-game` con la clase `.disable-btn` mientras el contador de células vivas sea 0 
+> Requiere tener al menos 1 celda/célula viva para permitir iniciar la partida/simulación.
