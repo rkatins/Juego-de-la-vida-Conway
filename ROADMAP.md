@@ -85,7 +85,8 @@
 
 35. [ ] Ejecutar `git mv [nombre_antiguo.ext] [nombre_nuevo.ext]` para cambiar el nombre de `PasosController.js` a `ReproductorController.js`
 
-36. [ ] Boton que iniciara la simulación, una vez que se pulse el boton desaparecera o se deshabilitara. Mientras que este boton sea visible la opcion de pausar simulacion que se encontrará en el panel de reproducción debe estar deshabilitado.
+36. [-] Boton que iniciara la simulación, una vez que se pulse el boton desaparecera o se deshabilitara. Mientras que este boton sea visible la opcion de pausar simulacion que se encontrará en el panel de reproducción debe estar deshabilitado.
+> Se complementa con la 38, 39 y 40
 
 37. [ ] Implementar funciones del panel de reprodución.
 
