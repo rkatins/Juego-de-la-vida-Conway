@@ -20,3 +20,14 @@
 
     --font-space-grotesk: 'Space Grotesk', sans-serif;
 }
+
+
+.hide-tag {
+    display: none;
+}
+
+.disable-btn {
+    pointer-events: none;
+
+    opacity: .5;
+}
