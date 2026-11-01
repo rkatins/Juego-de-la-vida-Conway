@@ -85,7 +85,8 @@
 
 35. [ ] Ejecutar `git mv [nombre_antiguo.ext] [nombre_nuevo.ext]` para cambiar el nombre de `PasosController.js` a `ReproductorController.js`
 
-36. [ ] Boton que iniciara la simulación, una vez que se pulse el boton desaparecera o se deshabilitara. Mientras que este boton sea visible la opcion de pausar simulacion que se encontrará en el panel de reproducción debe estar deshabilitado.
+36. [-] Boton que iniciara la simulación, una vez que se pulse el boton desaparecera o se deshabilitara. Mientras que este boton sea visible la opcion de pausar simulacion que se encontrará en el panel de reproducción debe estar deshabilitado.
+> Se complementa con la 38, 39 y 40
 
 37. [ ] Implementar funciones del panel de reprodución.
 
@@ -95,6 +96,11 @@
 
 40. [x] Suavizar la transición y reubicación de la rejilla al desaparecer/aparecer `btn-start-game`.
 
-41. [-] Ajustes de cursor en el botón deshabilitado del navBar y deshabilitación de su tooltip asociado.
+41. [x] Ajustes de cursor en el botón deshabilitado del navBar y deshabilitación de su tooltip asociado.
 
 42. [ ] Revisión y puesta a cero de los valores del `contador` de generaciones/pasos al pulsar el botón de reiniciar.
+
+43. [-] Aplicar la clase `disable-btn` a los controles multimedia del panel de pasos.
+
+44. [ ] Deshabilitar `btn-start-game` con la clase `.disable-btn` mientras el contador de células vivas sea 0 
+> Requiere tener al menos 1 celda/célula viva para permitir iniciar la partida/simulación.
