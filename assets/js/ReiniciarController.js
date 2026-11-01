@@ -19,7 +19,7 @@ class ReiniciarController {
         Pasos.juegoPausado = true
         btn_start_game.classList.remove('hide-tag')
 
-        icon_ajustePasos.classList.add('disable-btn')
+        icon_ajustePasos.parentNode.classList.add('disable-btn')
         useElem.setAttribute('href', "./assets/icons/icons.svg#play")
 
         /**
