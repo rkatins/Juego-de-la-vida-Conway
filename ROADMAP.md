@@ -96,3 +96,5 @@
 40. [ ] Suavizar la transición y reubicación de la rejilla al desaparecer/aparecer `btn-start-game`.
 
 41. [ ] Ajustes de cursor en el botón deshabilitado del navBar y deshabilitación de su tooltip asociado.
+
+42. [ ] Revisión y puesta a cero de los valores del `contador` de generaciones/pasos al pulsar el botón de reiniciar.
