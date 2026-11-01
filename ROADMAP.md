@@ -93,8 +93,8 @@
 
 39. [x] Restaurar el estado inicial al pulsar el botón de reiniciar (ReiniciarController): volver a mostrar btn-start-game y deshabilitar de nuevo el botón de reproducción con la clase disable-btn.
 
-40. [ ] Suavizar la transición y reubicación de la rejilla al desaparecer/aparecer `btn-start-game`.
+40. [x] Suavizar la transición y reubicación de la rejilla al desaparecer/aparecer `btn-start-game`.
 
-41. [ ] Ajustes de cursor en el botón deshabilitado del navBar y deshabilitación de su tooltip asociado.
+41. [-] Ajustes de cursor en el botón deshabilitado del navBar y deshabilitación de su tooltip asociado.
 
 42. [ ] Revisión y puesta a cero de los valores del `contador` de generaciones/pasos al pulsar el botón de reiniciar.
