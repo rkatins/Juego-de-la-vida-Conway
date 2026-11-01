@@ -31,6 +31,11 @@ class ReiniciarController {
             panel.classList.remove('activo')
         })
 
+        document.querySelectorAll('.tooltip').forEach(tooltip => {
+            tooltip.style.visibility = ""
+            tooltip.style.opacity = ""
+        })
+
         NavBar.panelAbierto = []
     }
 }

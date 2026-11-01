@@ -138,10 +138,7 @@ btn_play_ajustePasos.addEventListener('click', () => {
  */
 icon_ajustePasos.addEventListener('click', () => {
     Pasos.fAbrirCerrarPanel()
-
-    if (icon_ajustePasos.classList.contains('disable-btn')) {
-        Pasos.fAlternarToolTip()
-    }
+    Pasos.fAlternarToolTip()
 })
 
 /*
