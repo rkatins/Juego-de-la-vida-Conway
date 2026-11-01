@@ -16,9 +16,7 @@
     scale: 1.1;
 }
 
-#btn-start-game {
-    margin-bottom: 15px;
-    
+#btn-start-game {    
     /*
      * Permite ver el efecto de la clase `glass3d`. Por defecto la etiqueta
      * `<button>` aplica un fondo gris, y en este caso hay que deshabilitarlo
@@ -29,4 +27,18 @@
 
     font-size: 20px;
     color: var(--linen);
+}
+
+#btn-start-game {
+    position: fixed;
+    bottom: 32px;
+
+    width: fit-content;
+
+    margin-inline: auto;
+
+    z-index: 10;
+    
+    /* Transición suave para cuando aparezca/desaparezca -> .btn */
+    transition: all 0.3s ease;
 }
