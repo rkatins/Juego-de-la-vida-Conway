@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn_start_game.classList.remove('hide-tag')
 
         // No permite el hacer `click` sobre un boton del navBar a la vez que le da un aspecto como deshabilitado
-        icon_ajustePasos.classList.add('disable-btn')
+        icon_ajustePasos.parentNode.classList.add('disable-btn')
         // Aunque el `SVG` no se vea cambiar el icono que muestra para evitar confusiones de cualquier tipo
         useElem.setAttribute('href', "./assets/icons/icons.svg#play")
     }
@@ -163,6 +163,6 @@ btn_start_game.addEventListener('click', () => {
     btn_start_game.classList.add('hide-tag')
     
     // El icon/btn del navBar es clickable y recupera su color para dar una respuesta visual de habilitado
-    icon_ajustePasos.classList.remove('disable-btn')
+    icon_ajustePasos.parentNode.classList.remove('disable-btn')
     useElem.setAttribute('href', "./assets/icons/icons.svg#pause")
 })

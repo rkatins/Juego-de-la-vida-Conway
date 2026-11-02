@@ -19,7 +19,7 @@ class ReiniciarController {
         Pasos.juegoPausado = true
         btn_start_game.classList.remove('hide-tag')
 
-        icon_ajustePasos.classList.add('disable-btn')
+        icon_ajustePasos.parentNode.classList.add('disable-btn')
         useElem.setAttribute('href', "./assets/icons/icons.svg#play")
 
         /**
@@ -29,6 +29,11 @@ class ReiniciarController {
          */
         document.querySelectorAll('.panel-ajustes').forEach(panel => {
             panel.classList.remove('activo')
+        })
+
+        document.querySelectorAll('.tooltip').forEach(tooltip => {
+            tooltip.style.visibility = ""
+            tooltip.style.opacity = ""
         })
 
         NavBar.panelAbierto = []
