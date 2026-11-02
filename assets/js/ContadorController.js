@@ -13,13 +13,13 @@ class ContadorController {
 
         contador_celda_viva.textContent = celdas_vivas.toString()
 
+        let controles_multimedia = document.querySelector("#ajustePasos-panel > .controles-multimedia")
+        let btn_start_game = document.getElementById('btn-start-game')
         if (parseInt(contador_celda_viva.textContent, 10) >= 1) {
-            let btn_start_game = document.getElementById('btn-start-game')
-
+            controles_multimedia.classList.remove('disable-btn')
             btn_start_game.classList.remove('disable-btn')
         } else {
-            let btn_start_game = document.getElementById('btn-start-game')
-
+            controles_multimedia.classList.add('disable-btn')
             btn_start_game.classList.add('disable-btn')
         }
 

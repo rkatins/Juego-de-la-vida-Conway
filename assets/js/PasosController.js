@@ -123,6 +123,9 @@ document.addEventListener('DOMContentLoaded', () => {
         icon_ajustePasos.parentNode.classList.add('disable-btn')
         // Aunque el `SVG` no se vea cambiar el icono que muestra para evitar confusiones de cualquier tipo
         useElem.setAttribute('href', "./assets/icons/icons.svg#play")
+
+        let controles_multimedia = document.querySelector("#ajustePasos-panel > .controles-multimedia")
+        if (Pasos.juegoPausado) controles_multimedia.classList.add('disable-btn')
     }
 })
 
