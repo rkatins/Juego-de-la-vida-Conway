@@ -11,15 +11,17 @@ class ContadorController {
 
         celdas_vivas < 1 ? celdas_vivas = 0 : celdas_vivas
 
-        // console.log('celdas_vivas:', celdas_vivas)
-
         contador_celda_viva.textContent = celdas_vivas.toString()
 
-        // const celdas = document.querySelectorAll("#grid > div.marcada")
+        if (parseInt(contador_celda_viva.textContent, 10) >= 1) {
+            let btn_start_game = document.getElementById('btn-start-game')
 
-        // celdas.forEach(celda => {
-        //     console.log(celda)
-        // })
+            btn_start_game.classList.remove('disable-btn')
+        } else {
+            let btn_start_game = document.getElementById('btn-start-game')
+
+            btn_start_game.classList.add('disable-btn')
+        }
 
         return celdas_vivas
     }
