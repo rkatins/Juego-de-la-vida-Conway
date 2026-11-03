@@ -3,29 +3,22 @@ const contador_celda_disponible = document.querySelector('#contador-celda-dispon
 
 const contenedor_grid = document.querySelector('#grid')
 
-let celdas_vivas = 0
-
 class ContadorController {
     fContadorCeldaViva() {
-        let celdas_vivas = document.querySelectorAll("#grid > div.marcada").length
+        let celdas_vivas_longitud = document.querySelectorAll("#grid > div.marcada").length
 
         if (contador_celda_viva) {
-            contador_celda_viva.textContent = celdas_vivas.toString();
+            contador_celda_viva.textContent = celdas_vivas_longitud.toString();
         }
 
         let controles_multimedia = document.querySelector("#ajustePasos-panel > .controles-multimedia")
         let btn_start_game = document.getElementById('btn-start-game')
-        if (btn_start_game) {
-            if (celdas_vivas >= 1) {
-                controles_multimedia.classList.remove('disable-btn')
-                btn_start_game.classList.remove('disable-btn')
-            } else {
-                controles_multimedia.classList.add('disable-btn')
-                btn_start_game.classList.add('disable-btn')
-            }
-        }
 
-        return celdas_vivas
+        let tieneCeldas = celdas_vivas_longitud >= 1;
+        btn_start_game.classList.toggle('disable-btn', !tieneCeldas);
+        controles_multimedia.classList.toggle('disable-btn', !tieneCeldas);
+
+        return celdas_vivas_longitud
     }
 
     fContadorCeldaDisponible() {
@@ -43,8 +36,7 @@ class ContadorController {
     }
 
     fReiniciarContadores() {
-        let celdasVivas = 0;
-
+        // Es parcialmente innecesario, esta más que nada por asegurar
         if (contador_celda_viva) contador_celda_viva.textContent = '0';
         
         this.fContadorCeldaDisponible();
