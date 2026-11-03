@@ -37,6 +37,8 @@ class ReiniciarController {
         })
 
         NavBar.panelAbierto = []
+
+        Contador.fReiniciarContadores();
     }
 }
 
