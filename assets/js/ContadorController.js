@@ -15,6 +15,7 @@ class ContadorController {
         let btn_start_game = document.getElementById('btn-start-game')
 
         let tieneCeldas = celdas_vivas_longitud >= 1;
+        // (Si tieneCeldas es falso, fuerza a añadir disable-btn; si es verdadero, la retira)
         btn_start_game.classList.toggle('disable-btn', !tieneCeldas);
         controles_multimedia.classList.toggle('disable-btn', !tieneCeldas);
 
