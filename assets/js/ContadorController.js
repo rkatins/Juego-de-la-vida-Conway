@@ -7,27 +7,47 @@ let celdas_vivas = 0
 
 class ContadorController {
     fContadorCeldaViva() {
-        celdas_vivas = document.querySelectorAll("#grid > div.marcada").length
+        let celdas_vivas = document.querySelectorAll("#grid > div.marcada").length
 
-        celdas_vivas < 1 ? celdas_vivas = 0 : celdas_vivas
-
-        contador_celda_viva.textContent = celdas_vivas.toString()
+        if (contador_celda_viva) {
+            contador_celda_viva.textContent = celdas_vivas.toString();
+        }
 
         let controles_multimedia = document.querySelector("#ajustePasos-panel > .controles-multimedia")
         let btn_start_game = document.getElementById('btn-start-game')
-        if (parseInt(contador_celda_viva.textContent, 10) >= 1) {
-            controles_multimedia.classList.remove('disable-btn')
-            btn_start_game.classList.remove('disable-btn')
-        } else {
-            controles_multimedia.classList.add('disable-btn')
-            btn_start_game.classList.add('disable-btn')
+        if (btn_start_game) {
+            if (celdas_vivas >= 1) {
+                controles_multimedia.classList.remove('disable-btn')
+                btn_start_game.classList.remove('disable-btn')
+            } else {
+                controles_multimedia.classList.add('disable-btn')
+                btn_start_game.classList.add('disable-btn')
+            }
         }
 
         return celdas_vivas
     }
 
     fContadorCeldaDisponible() {
-        contador_celda_disponible.textContent = ((number_ajusteGrid.value * number_ajusteGrid.value) - Contador.fContadorCeldaViva()).toString()
+        let total_celdas = Number(number_ajusteGrid.value) * Number(number_ajusteGrid.value)
+
+        /*
+         * - `disponibles` -> Valor numerico
+         * - `contador_celda_disponible` -> Elemento texto del DOM
+         */
+        let disponibles = total_celdas - this.fContadorCeldaViva();
+
+        if (contador_celda_disponible) {
+            contador_celda_disponible.textContent = disponibles.toString();
+        }
+    }
+
+    fReiniciarContadores() {
+        let celdasVivas = 0;
+
+        if (contador_celda_viva) contador_celda_viva.textContent = '0';
+        
+        this.fContadorCeldaDisponible();
     }
 }
 
