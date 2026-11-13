@@ -144,7 +144,7 @@ function fDibujarRejilla(tamagno) {
         }
     })
 
-    /**
+    /*
      * En JavaScript las clases son funciones constructoras bajo el capó,
      * por lo que 'typeof LogicaJuegoDeLaVida === "function"' verifica si la clase está definida.
      * 
