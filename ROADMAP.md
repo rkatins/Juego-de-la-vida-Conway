@@ -98,7 +98,7 @@
 
 41. [x] Ajustes de cursor en el botón deshabilitado del navBar y deshabilitación de su tooltip asociado.
 
-42. [ ] Revisión y puesta a cero de los valores del `contador` de generaciones/pasos al pulsar el botón de reiniciar.
+42. [x] Revisión y puesta a cero de los valores del `contador` de generaciones/pasos al pulsar el botón de reiniciar.
 
 43. [x] Aplicar la clase `disable-btn` a los controles multimedia del panel de pasos.
 

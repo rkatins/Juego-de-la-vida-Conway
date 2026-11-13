@@ -3,31 +3,44 @@ const contador_celda_disponible = document.querySelector('#contador-celda-dispon
 
 const contenedor_grid = document.querySelector('#grid')
 
-let celdas_vivas = 0
-
 class ContadorController {
     fContadorCeldaViva() {
-        celdas_vivas = document.querySelectorAll("#grid > div.marcada").length
+        let celdas_vivas_longitud = document.querySelectorAll("#grid > div.marcada").length
 
-        celdas_vivas < 1 ? celdas_vivas = 0 : celdas_vivas
-
-        contador_celda_viva.textContent = celdas_vivas.toString()
+        if (contador_celda_viva) {
+            contador_celda_viva.textContent = celdas_vivas_longitud.toString();
+        }
 
         let controles_multimedia = document.querySelector("#ajustePasos-panel > .controles-multimedia")
         let btn_start_game = document.getElementById('btn-start-game')
-        if (parseInt(contador_celda_viva.textContent, 10) >= 1) {
-            controles_multimedia.classList.remove('disable-btn')
-            btn_start_game.classList.remove('disable-btn')
-        } else {
-            controles_multimedia.classList.add('disable-btn')
-            btn_start_game.classList.add('disable-btn')
-        }
 
-        return celdas_vivas
+        let tieneCeldas = celdas_vivas_longitud >= 1;
+        // (Si tieneCeldas es falso, fuerza a añadir disable-btn; si es verdadero, la retira)
+        btn_start_game.classList.toggle('disable-btn', !tieneCeldas);
+        controles_multimedia.classList.toggle('disable-btn', !tieneCeldas);
+
+        return celdas_vivas_longitud
     }
 
     fContadorCeldaDisponible() {
-        contador_celda_disponible.textContent = ((number_ajusteGrid.value * number_ajusteGrid.value) - Contador.fContadorCeldaViva()).toString()
+        let total_celdas = Number(number_ajusteGrid.value) * Number(number_ajusteGrid.value)
+
+        /*
+         * - `disponibles` -> Valor numerico
+         * - `contador_celda_disponible` -> Elemento texto del DOM
+         */
+        let disponibles = total_celdas - this.fContadorCeldaViva();
+
+        if (contador_celda_disponible) {
+            contador_celda_disponible.textContent = disponibles.toString();
+        }
+    }
+
+    fReiniciarContadores() {
+        // Es parcialmente innecesario, esta más que nada por asegurar
+        if (contador_celda_viva) contador_celda_viva.textContent = '0';
+        
+        this.fContadorCeldaDisponible();
     }
 }
 
