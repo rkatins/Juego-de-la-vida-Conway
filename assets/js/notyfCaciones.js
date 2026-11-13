@@ -53,3 +53,4 @@ function fPruebaNotyf() {
     className: 'notyf-text-center',
   })
 }
+
