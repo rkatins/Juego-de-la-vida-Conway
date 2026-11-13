@@ -90,7 +90,7 @@ function fAjustarLimitesMaximos() {
 
 
 
-/**
+/*
  * Limpia y redibuja la rejilla con el tamaño especificado.
  * Intenta reconstruir las celdas pintadas/marcadas previas y restaurarlas
  * dentro de los límites del nuevo tamaño.
