@@ -88,7 +88,7 @@ class AjustesGridController {
      * Aumenta/Decrementa el valor del control deslizante en función del valor introducido en el campo numérico
      */
     fChangeInputNumber() {
-        if (number_ajusteGrid.valueAsNumber >= window.maxCeldas || range_ajusteGrid.valueAsNumber >= window.maxCeldas) {
+        if (number_ajusteGrid.value >= window.maxCeldas) {
             notyfCacion.fNotyfMaxCeldas()
 
             range_ajusteGrid.value = number_ajusteGrid.value
@@ -101,7 +101,7 @@ class AjustesGridController {
      * Tope físico nativo, no requiere hacer la comprovacion del IF de `fChangeInputNumber` y `fIncrementarBtnPlus`
      */
     fChangeInputRange() {
-        if (range_ajusteGrid.valueAsNumber >= window.maxCeldas) notyfCacion.fNotyfMaxCeldas()
+        if (range_ajusteGrid.valueAsNumber >= window.maxCeldas) notyfCacion.fNotyfMaxCeldasRange()
 
         number_ajusteGrid.value = range_ajusteGrid.value
     }

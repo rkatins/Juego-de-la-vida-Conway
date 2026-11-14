@@ -18,6 +18,15 @@ class notyfCaciones {
       className: 'notyf-text-color notyf-text-center notyf-error'
     })
   }
+
+  fNotyfMaxCeldasRange() {
+    notyf.open({
+      message: 'Ya llegaste al tamaño máximo',
+      duration: 2000,
+      dismissible: false,
+      className: 'notyf-text-color notyf-text-center notyf-info'
+    })
+  }
 }
 
 const notyfCacion = new notyfCaciones()
