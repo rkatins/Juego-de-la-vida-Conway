@@ -104,3 +104,9 @@
 
 44. [x] Deshabilitar `btn-start-game` con la clase `.disable-btn` mientras el contador de células vivas sea 0 
 > Requiere tener al menos 1 celda/célula viva para permitir iniciar la partida/simulación.
+
+45. [ ] Migrar la rejilla a `<canvas>` con renderizado por lotes y `requestAnimationFrame` para lograr el máximo rendimiento.
+> - Sustituir los `div.celula` por un único `<canvas id="grid"></canvas>` (Contexto 2D).
+> - Trazar toda la cuadrícula en una sola operación gráfica (`beginPath` + `stroke`) y pintar solo las células vivas (`fillRect`).
+> - Detectar la casilla pulsada mediante cálculo matemático de coordenadas (`offsetX / tamanoCelda` y `offsetY / tamanoCelda`).
+> - Conectar `ContadorController` y `ReiniciarController` directamente a la matriz de datos en memoria en lugar de consultar el DOM.
