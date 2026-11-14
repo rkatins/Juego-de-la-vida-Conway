@@ -79,7 +79,7 @@
 
 32. [x] Al pulsar sobre el boton de reiniciar mostrar una notificacion/mensaje haciendo uso de `notyf` para informar al usuario que la partida ha sido reiniciada
 
-33. [ ] Si el tamaño de la ventana del navegador ha cambiado mientras se tiene el panel de ajuste del tamaño de la rejilla abierto, y se pulsa sobre el boton `+` se debera mostrar una notificacion/mensaje haciendo uso de `notyf` que indique _ya llegaste al tamaño maximo_
+33. [x] Si el tamaño de la ventana del navegador ha cambiado mientras se tiene el panel de ajuste del tamaño de la rejilla abierto, y se pulsa sobre el boton `+` se debera mostrar una notificacion/mensaje haciendo uso de `notyf` que indique _ya llegaste al tamaño maximo_
 
 34. [ ] Si el tamaño de la ventana del navegador ha cambiado, el valor/numero mostrado en el panel de ajuste del tamaño de la rejilla para reflejar el nuevo tamaño maximo permitido
 
