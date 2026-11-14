@@ -110,3 +110,5 @@
 > - Trazar toda la cuadrícula en una sola operación gráfica (`beginPath` + `stroke`) y pintar solo las células vivas (`fillRect`).
 > - Detectar la casilla pulsada mediante cálculo matemático de coordenadas (`offsetX / tamanoCelda` y `offsetY / tamanoCelda`).
 > - Conectar `ContadorController` y `ReiniciarController` directamente a la matriz de datos en memoria en lugar de consultar el DOM.
+
+46. [ ] Asegurar y recalcular que la rejilla mantenga siempre una forma cuadrada perfecta sin desbordar en el eje X ni en el eje Y, tomando como límite máximo la longitud del eje menor de la pantalla.
