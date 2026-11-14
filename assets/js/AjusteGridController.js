@@ -1,10 +1,10 @@
-/**
+/*
  * Guarda el valor numérico actual al hacer foco en el campo de entrada.
  * Esto permite restaurar el último valor válido en caso de que el usuario introduzca un dato incorrecto.
  */
 // let ultimoValorNumericoValido = null
 
-/**
+/*
  * Valida el valor del tamaño al perder el foco en el campo numérico.
  * Si el valor no es un número, es menor de 10, o supera el máximo de celdas calculado,
  * se restaura el último valor válido registrado.
@@ -30,7 +30,7 @@
 // })
 
 class AjustesGridController {
-    /**
+    /*
      * Sincroniza el valor entre el control deslizante y el campo numérico, y
      * desencadena el redibujado de la cuadrícula en el DOM, actualizando además la variable CSS.
      * 
@@ -44,11 +44,20 @@ class AjustesGridController {
         document.documentElement.style.setProperty('--grid-size', number_ajusteGrid.value)
     }
 
-    /**
+    /*
      * Incrementa el tamaño de la cuadrícula en 1 celda al hacer clic en el botón (+).
      * Valida que el nuevo tamaño no supere el límite máximo de celdas calculado dinámicamente.
+     * 
+     * No se pone el `range` en la condicion como si en `fChangeInputNumber` un poco por lo mismo
+     * que no se pone el IF en `fChangeInputRange`, por que el `range` ya tiene un limite que nose va a sobrepasar
      */
     fIncrementarBtnPlus() {
+        // Comprueba que el valor de celdas no sea mayor al numero pulsando el boton `+`
+        if (number_ajusteGrid.value >= window.maxCeldas) {
+            notyfCacion.fNotyfMaxCeldas()
+            return
+        }
+
         let val = parseInt(number_ajusteGrid.value) || 10
         const maxVal = window.maxCeldas || 256
 
@@ -60,7 +69,7 @@ class AjustesGridController {
         }
     }
 
-    /**
+    /*
      * Decrementa el tamaño de la cuadrícula en 1 celda al hacer clic en el botón (-).
      * Valida que el nuevo tamaño no sea menor que el límite mínimo permitido de 10 celdas.
      */
@@ -75,21 +84,29 @@ class AjustesGridController {
         }
     }
 
-    /**
+    /*
      * Aumenta/Decrementa el valor del control deslizante en función del valor introducido en el campo numérico
      */
     fChangeInputNumber() {
-        range_ajusteGrid.value = number_ajusteGrid.value
+        if (number_ajusteGrid.valueAsNumber >= window.maxCeldas || range_ajusteGrid.valueAsNumber >= window.maxCeldas) {
+            notyfCacion.fNotyfMaxCeldas()
+
+            range_ajusteGrid.value = number_ajusteGrid.value
+        }
     }
 
-    /**
+    /*
      * Aumenta/Decrementa el valor numérico del tamaño de la rejilla en función del valor indicado por el control deslizante
+     *
+     * Tope físico nativo, no requiere hacer la comprovacion del IF de `fChangeInputNumber` y `fIncrementarBtnPlus`
      */
     fChangeInputRange() {
+        if (range_ajusteGrid.valueAsNumber >= window.maxCeldas) notyfCacion.fNotyfMaxCeldas()
+            
         number_ajusteGrid.value = range_ajusteGrid.value
     }
 
-    /**
+    /*
      * Abre o cierra el panel de ajustes del Grid
      */
     fAbrirCerrarPanel() {
@@ -98,7 +115,7 @@ class AjustesGridController {
         panel_ajusteGrid.classList.toggle("activo")
     }
 
-    /**
+    /*
      * Alterna la visibilidad del ToolTip
      */
     fAlternarToolTip() {
