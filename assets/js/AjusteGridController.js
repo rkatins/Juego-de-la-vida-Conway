@@ -52,7 +52,7 @@ class AjustesGridController {
      * que no se pone el IF en `fChangeInputRange`, por que el `range` ya tiene un limite que nose va a sobrepasar
      */
     fIncrementarBtnPlus() {
-        // Comprueba que el valor de celdas no sea mayor al numero pulsando el boton `+`
+        // Comprueba que el valor de celdas no sea mayor al numero maximo de celdas que puede pintar para la pantalla actual
         if (number_ajusteGrid.value >= window.maxCeldas) {
             notyfCacion.fNotyfMaxCeldas()
             return
@@ -102,7 +102,7 @@ class AjustesGridController {
      */
     fChangeInputRange() {
         if (range_ajusteGrid.valueAsNumber >= window.maxCeldas) notyfCacion.fNotyfMaxCeldas()
-            
+
         number_ajusteGrid.value = range_ajusteGrid.value
     }
 
