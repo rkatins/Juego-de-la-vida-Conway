@@ -6,7 +6,7 @@ class notyfCaciones {
       message: 'Juego reiniciado',
       duration: 2000,
       dismissible: false,
-      className: 'notyf-text-color notyf-text-center notyf-info'
+      className: 'notyf-text-color-light notyf-text-center notyf-info'
     })
   }
 
@@ -15,7 +15,7 @@ class notyfCaciones {
       message: 'Ya llegaste al tamaño máximo',
       duration: 2000,
       dismissible: false,
-      className: 'notyf-text-color notyf-text-center notyf-error'
+      className: 'notyf-text-color-light notyf-text-center notyf-error'
     })
   }
 
@@ -24,7 +24,7 @@ class notyfCaciones {
       message: 'Ya llegaste al tamaño máximo',
       duration: 2000,
       dismissible: false,
-      className: 'notyf-text-color notyf-text-center notyf-info'
+      className: 'notyf-text-color-dark notyf-text-center notyf-info'
     })
   }
 }

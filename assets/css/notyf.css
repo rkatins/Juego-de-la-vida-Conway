@@ -4,12 +4,16 @@
     align-items: center;
 }
 
-.notyf-text-color {
+.notyf-text-color-light {
     color: var(--linen);
 }
 
+.notyf-text-color-dark {
+    color: var(--charcoal);
+}
+
 .notyf-info {
-    background: var(--notyf-blue-green);
+    background: var(--notyf-yellow-ambar);
 }
 
 .notyf-succes {
