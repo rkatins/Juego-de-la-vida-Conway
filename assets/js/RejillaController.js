@@ -1,4 +1,4 @@
-/**
+/*
  * Escucha la carga completa del DOM para ajustar los límites del tablero y dibujar la rejilla por primera vez.
  */
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fDibujarRejilla(10)
 })
 
-/**
+/*
  * Escucha el cambio de dimensiones de la ventana para recalcular y aplicar el tamaño máximo en píxeles y celdas.
  */
 window.addEventListener('resize', () => {
@@ -15,7 +15,7 @@ window.addEventListener('resize', () => {
 
 class RejillaController {
 
-    /**
+    /*
      * Gestiona la selección y marcado de las casillas de la rejilla
      * con un límite máximo de casillas seleccionadas (total / 2)
      */
@@ -50,7 +50,7 @@ const Rejilla = new RejillaController()
  */
 let maxTamagno = 50
 
-/**
+/*
  * Calcula y actualiza dinámicamente los límites máximos físicos y lógicos de la cuadrícula.
  * 
  * Explicación de la conversión (Regla de Tres):
@@ -90,7 +90,7 @@ function fAjustarLimitesMaximos() {
 
 
 
-/**
+/*
  * Limpia y redibuja la rejilla con el tamaño especificado.
  * Intenta reconstruir las celdas pintadas/marcadas previas y restaurarlas
  * dentro de los límites del nuevo tamaño.
@@ -144,7 +144,7 @@ function fDibujarRejilla(tamagno) {
         }
     })
 
-    /**
+    /*
      * En JavaScript las clases son funciones constructoras bajo el capó,
      * por lo que 'typeof LogicaJuegoDeLaVida === "function"' verifica si la clase está definida.
      * 
